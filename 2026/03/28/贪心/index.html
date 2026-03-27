@@ -231,22 +231,22 @@
     <div class="content-article">
         <h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a><strong>贪心</strong></h1><h2 id="1-哈夫曼模型"><a href="#1-哈夫曼模型" class="headerlink" title="1.哈夫曼模型"></a><strong>1.哈夫曼模型</strong></h2><p>哈夫曼树可以让<script type="math/tex">\sum dep*siz</script>最小</p>
 <p>方法是每次合并最小的两个</p>
-<p>小根堆nlogn实现</p>
-<p><strong>开两个队列可以O(n)实现 但需要排序所以最后复杂度也为$O(nlogn)$</strong></p>
+<p>小根堆<script type="math/tex">nlogn</script>实现</p>
+<p><strong>开两个队列可以<script type="math/tex">O(n)</script>实现 但需要排序所以最后复杂度也为<script type="math/tex">O(nlogn)</script></strong></p>
 <p>例题</p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1090">P1090 [NOIP 2004 提高组] 合并果子</a></p>
-<p>题意即为求$\sum dep*siz$的最小值</p>
+<p>题意即为求<script type="math/tex">\sum dep*siz</script>的最小值</p>
 <h2 id="2-邻项交换法（调整法）"><a href="#2-邻项交换法（调整法）" class="headerlink" title="2.邻项交换法（调整法）"></a><strong>2.邻项交换法（调整法）</strong></h2><p>考虑相邻两项交换前与交换后对（局部）答案的影响，以此推出排序标准</p>
 <p>需要保证邻项交换只对该两项产生影响才可</p>
 <p>例题</p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1080">P1080 [NOIP 2012 提高组] 国王游戏</a></p>
-<p>首先相邻两个大臣交换对其他所有大臣并无影响，接下来我们不妨设两个大臣分别为$a1,b1,a2,b2$，设之前的大臣$\prod a$为$x$</p>
-<p>首先如果按照目前的顺序那么两个大臣的答案分别为$\frac{x}{b1}$和$\frac{x*a1}{b2}$</p>
-<p>如果交换两者，那么答案变为$\frac{x}{b2}$和$\frac{x*a2}{b1}$</p>
-<p>所以假如我们现在的排序是正确的，那么有$max(\frac{x}{b1},\frac{x<em>a1}{b2})&lt;max(\frac{x}{b2},\frac{x</em>a2}{b1})$</p>
-<p>因为$\frac{x<em>a2}{b1}&gt;\frac{x}{b1}$和$\frac{x</em>a1}{b2}&gt;\frac{x}{b2}$是显然的</p>
-<p>所以我们想保证上面不等式恒成立，只需要保证$\frac{x<em>a1}{b2}&lt;\frac{x</em>a2}{b1}$</p>
-<p>化简一下就是$a1b1&lt;a2b2$，这也就是我们排序的标准了。</p>
+<p>首先相邻两个大臣交换对其他所有大臣并无影响，接下来我们不妨设两个大臣分别为<script type="math/tex">a1,b1,a2,b2</script>，设之前的大臣<script type="math/tex">\prod a</script>为<script type="math/tex">x</script></p>
+<p>首先如果按照目前的顺序那么两个大臣的答案分别为<script type="math/tex">\frac{x}{b1}</script>和<script type="math/tex">\frac{x*a1}{b2}</script></p>
+<p>如果交换两者，那么答案变为<script type="math/tex">\frac{x}{b2}</script>和<script type="math/tex">\frac{x*a2}{b1}</script></p>
+<p>所以假如我们现在的排序是正确的，那么有<script type="math/tex">max(\frac{x}{b1},\frac{x*a1}{b2})<max(\frac{x}{b2},\frac{x*a2}{b1})</script></p>
+<p>因为<script type="math/tex">\frac{x*a2}{b1}>\frac{x}{b1}</script>和<script type="math/tex">\frac{x*a1}{b2}>\frac{x}{b2}</script>是显然的</p>
+<p>所以我们想保证上面不等式恒成立，只需要保证<script type="math/tex">\frac{x*a1}{b2}<\frac{x*a2}{b1}</script></p>
+<p>化简一下就是<script type="math/tex">a1b1<a2b2</script>，这也就是我们排序的标准了。</p>
 <h2 id="3-削峰，平均思想"><a href="#3-削峰，平均思想" class="headerlink" title="3.削峰，平均思想"></a>3.削峰，平均思想</h2><p>例题</p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1106">P1106 删数问题</a></p>
 <p>考虑如果出现左边的数大于右边的数，那么删掉左边之后右边的数就会顶上来，从而使得结果变小，这其实就是进行了一个削峰的操作。</p>
@@ -255,7 +255,7 @@
 <p>正确性：我们考虑如果不这样做的话那么x以后一定会成为某一组的结尾，但如果这样做那么有可能以后可以让x+1作为结尾，这其实也是进行了一个削峰的操作。</p>
 <p>稍微写一下实现</p>
 <p>1.最简便的是使用map，分组过程中不断遍历map就好</p>
-<p>2.当然可以手写离散化，在非连续的数之间插入一个出现次数为零的数即可，之后过程中使用链表可以保证复杂度为$O(n)$，所以瓶颈在排序</p>
+<p>2.当然可以手写离散化，在非连续的数之间插入一个出现次数为零的数即可，之后过程中使用链表可以保证复杂度为<script type="math/tex">O(n)</script>，所以瓶颈在排序</p>
 <h2 id="待归类"><a href="#待归类" class="headerlink" title="待归类"></a><strong>待归类</strong></h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1803">P1803 凌乱的yyy / 线段覆盖</a></p>
 
     </div>
@@ -398,11 +398,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/OI/" style="font-size: 18.04275853617159px;" class="tag-cloud-link">OI</a>
+    <a href="/tags/OI/" style="font-size: 11.224498685901443px;" class="tag-cloud-link">OI</a>
     
-    <a href="/tags/DP/" style="font-size: 14.62471546647313px;" class="tag-cloud-link">DP</a>
+    <a href="/tags/DP/" style="font-size: 15.742148220556164px;" class="tag-cloud-link">DP</a>
     
-    <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 17.797782717718725px;" class="tag-cloud-link">贪心</a>
+    <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 18.863022363015745px;" class="tag-cloud-link">贪心</a>
     
 </div>
                 
