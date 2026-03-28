@@ -1,644 +1,931 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Lio">
-    
-    <meta name="description" content="Blog">
-    
-    
-    
-    
-    
-    
+    <meta charset="utf-8" />
     <title>Lio&#39;s Blog</title>
-    <link href="http://example.com" rel="prefetch" />
+    <meta name="author" content="Lio" />
+    <meta name="description" content="Blog" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
 
-    
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/aos.css">
-<link rel="stylesheet" href="/css/style.css">
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
 
-    
-<script src="/js/jquery.min.js"></script>
 
-    
-<script src="/js/bootstrap.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
 
-    
-<script src="/js/aos.js"></script>
 
-    
-<script src="/js/highslide/highslide-full.min.js"></script>
 
-    
-<link rel="stylesheet" href="/js/highslide/highslide.css">
+<script src="/js/lib/preview.js"></script>
 
-    <style type="text/css">
-        @media (max-width: 768px) {
-            body {
-                background-color: #f0f0f0;
-                background: url('/imgs/xsbg.gif');
-                background-attachment: fixed;
-            }
-        }
-    </style>
-    
-    <!--<script type="text/javascript">
-      if (document.images) {
-        var avatar = new Image();
-        avatar.src = '/imgs/https:/cdn.luogu.com.cn/upload/image_hosting/lsr8qc9v.png'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
-        var previewsPreLoad = []
-        for(var i = 0; i < length; i++) {
-          previewsPreLoad.push(new Image())
-          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
-        }
-      }
-    </script>-->
-    <script>MathJax = {
-        tex:{
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-        svg:{
-                fontCache: 'global'
-            }
-        };
-    </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
-    <!-- 背景轮播图功能 -->
-    <section class="hidden-xs">
-    <ul class="cb-slideshow">
-        <li><span>天若</span></li>
-        <li><span>有情</span></li>
-        <li><span>天亦老</span></li>
-        <li><span>我为</span></li>
-        <li><span>长者</span></li>
-        <li><span>续一秒</span></li>
-    </ul>
-</section>
-    <!-- 欧尼酱功能, 谁用谁知道 -->
-    
-    <header class="navbar navbar-inverse" id="gal-header">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target=".bs-navbar-collapse"
-                    aria-expanded="false">
-                <span class="fa fa-lg fa-reorder"></span>
-            </button>
-            <a href="http://example.com">
-                
-                <style>
-                    #gal-header .navbar-brand {
-                        height: 54px;
-                        line-height: 24px;
-                        font-size: 28px;
-                        opacity: 1;
-                        background-color: rgba(0,0,0,0);
-                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
-                    }
-                </style>
-                <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">Lio&#39;s Blog</div>
-                
-            </a>
-        </div>
-        <div class="collapse navbar-collapse bs-navbar-collapse">
-            <ul class="nav navbar-nav" id="menu-gal">
-                
-                
-                <li class="current">
-                    <a href="/">
-                        <i class="fa fa-home"></i>首页
-                    </a>
-                </li>
-                
-                
-                
-                <li class="">
-                    <a href="/archives">
-                        <i class="fa fa-archive"></i>归档
-                    </a>
-                </li>
-                
-                
-                
-                
-                <li class="">
-                    <a href="/categories">
-                        <i class="fa fa-list"></i>分类
-                    </a>
-                </li>
-                
-                
-                
-                
-                
-                <li class="dropdown">
-                    <!-- TODO 添加hover dropdown效果 -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-                        <i class="fa fa-tags"></i>标签
-                    </a>
-                    <ul class="dropdown-menu">
-                        
-                        
-                        <li>
-                            <a href="/tags/OI/">OI</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/DP/">DP</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
-                        </li>
-                        
-                        
-                        <li>
-                            <a href="/tags">...</a>
-                        </li>
-                        
-                        
-                    </ul>
-                </li>
-                
-                
-                
-                
-                <li class="">
-                    <a href="/about">
-                        <i class="fa fa-user"></i>关于我
-                    </a>
-                </li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</header>
-    <div id="gal-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 gal-right" id="mainstay">
-                    
-<div id="article-list">
-     
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">03月</span>
-        <span class="day">28</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2026/03/28/%E5%A4%8D%E5%81%A5/">
-                    <span>复健</span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/OI/">OI</a>, 
-                
-                <a href="/tags/%E6%B7%B7%E8%AE%B0/">混记</a>
-                
-            </span>
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2026/03/28/%E5%A4%8D%E5%81%A5/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2026/03/28/%E5%A4%8D%E5%81%A5/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview1.jpg" alt="复健">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2026/03/28/%E5%A4%8D%E5%81%A5/">
-                        <span>复健</span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2026-03-28
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            <i class="fa fa-tags"></i>
-            
-            <a href="/tags/OI/">OI</a>, 
-            
-            <a href="/tags/%E6%B7%B7%E8%AE%B0/">混记</a>
-            
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2026/03/28/%E5%A4%8D%E5%81%A5/">
-                    
-                    <img src="/imgs/preview/preview3.jpg" alt="复健">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2026/03/28/%E5%A4%8D%E5%81%A5/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">03月</span>
-        <span class="day">28</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2026/03/28/%E8%B4%AA%E5%BF%83/">
-                    <span>贪心</span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/OI/">OI</a>, 
-                
-                <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
-                
-            </span>
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2026/03/28/%E8%B4%AA%E5%BF%83/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2026/03/28/%E8%B4%AA%E5%BF%83/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview2.jpg" alt="贪心">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2026/03/28/%E8%B4%AA%E5%BF%83/">
-                        <span>贪心</span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2026-03-28
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            <i class="fa fa-tags"></i>
-            
-            <a href="/tags/OI/">OI</a>, 
-            
-            <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
-            
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2026/03/28/%E8%B4%AA%E5%BF%83/">
-                    
-                    <img src="/imgs/preview/preview3.jpg" alt="贪心">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2026/03/28/%E8%B4%AA%E5%BF%83/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
-    
-    <div class="data-article hidden-xs">
-        <span class="month">03月</span>
-        <span class="day">28</span>
-    </div>
-    <!-- 大型设备文章 -->
-    <section class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/">
-                    <span>初级DP</span>
-                </a>
-            </h1>
-        </div>
-        <div class="tag-article">
-            
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/OI/">OI</a>, 
-                
-                <a href="/tags/DP/">DP</a>
-                
-            </span>
-            
-            
-            <!-- TODO 添加评论统计 -->
-            <!--<span class="label label-gal">
-                <i class="fa fa-comments"></i>
-                <a href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/#comments">739</a>
-            </span>-->
-        </div>
-        <div class="alert alert-gal article-body content-article">
-            <div class="item">
-                <a href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/">
-                    <div class="img">
-                        
-                        <img src="/imgs/preview/preview4.jpg" alt="初级DP">
-                    </div>
-                    <div class="info">
-                        
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="visible-xs">
-        <div class="title-article">
-            <center>
-                <h4>
-                    <a href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/">
-                        <span>初级DP</span>
-                    </a>
-                </h4>
-            </center>
-        </div>
-        <p></p>
-        <center>
-            <i class="fa fa-calendar"></i> 2026-03-28
-        </center>
-        <p></p>
-        <p></p>
-        <center>
-            
-            <i class="fa fa-tags"></i>
-            
-            <a href="/tags/OI/">OI</a>, 
-            
-            <a href="/tags/DP/">DP</a>
-            
-            
-            
-        </center>
-        <p></p>
-        <div class="alert alert-gal article-body content-article">
-            <p style="text-align: center;">
-                <a href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/">
-                    
-                    <img src="/imgs/preview/preview1.jpg" alt="初级DP">
-                </a>
-            </p>
-        </div>
-        
-        <a class="btn btn-danger pull-right read-more btn-block" href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/">
-            阅读全文
-            <!--<span class="badge">739</span>-->
-        </a>
-    </section>
-</div>
-     
-</div>
-<!-- 前方最多7个 < 1 2 3 4 5 6 -->
-<!-- 前方超过第7页则分为 < 1 ... (n - 3) (n - 2) (n - 1) n, 此时前面为固定的6个 -->
-
-<!-- 后方最多8个 (n + 1) 到 (n + 7) > -->
-<!-- 如果末页和当前页相差超过7, 此时后面为固定的6个, (n + 1) (n + 2) (n + 3) ... total > -->
-
-
-
-<div id="gal-pagination" class="clearfix">
-    <ul class="pagination pagination-gal pull-right">
-        
-        
-        
-        
-        <li class="current">
-            <span>1</span>
-        </li>
-        
-        
-        
-        
-    </ul>
-</div>
-
-<!-- 加上这段代码原因： gitment在首页加载时, 如果找不到对应的控件会报错，此处加上，同时设置为none，防止报错 -->   
-
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
                 </div>
-                <aside class="col-md-4 gal-left" id="sidebar">
-    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
-<aside id="sidebar-search">
-    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <form class="form-inline clearfix" id="search-form" method="get"
-              action="/search/index.html">
-            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
-            <button class="btn btn-danger btn-gal" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
-    </div>
-</aside>
-    <aside id="sidebar-author">
-    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
-        <div class="panel-heading" style="text-align: center">
-            <i class="fa fa-quote-left"></i>
-            Lio
-            <i class="fa fa-quote-right"></i>
-        </div>
-        <div class="author-panel text-center">
-            <img src="https://cdn.luogu.com.cn/upload/image_hosting/lsr8qc9v.png" width="140" height="140"
-                 alt="个人头像" class="author-image">
-            <p class="author-description"><p>Blog</p>
-</p>
-        </div>
-    </div>
-</aside>
-    
-    <aside id="sidebar-recent_comments">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-comments"></i>
-            最新评论
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush"></ul>
-    </div>
-</aside>
-    
-    <!-- 要配置好leancloud才能开启此小工具 -->
-    
-    
-    <aside id="sidebar-recent_posts">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            近期文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2026/03/28/%E5%A4%8D%E5%81%A5/">复健</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2026/03/28/%E8%B4%AA%E5%BF%83/">贪心</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/">初级DP</a>
-                </span>
-            </li>
-            
-        </ul>
-    </div>
-</aside>
-    
-    
-    
-</aside>
             </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>LIO&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;LIO&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/background.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Lio&#39;s Blog</h1>
+                <h3></h3>
+                <h5>Blog</h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2026/03/28/%E5%A4%8D%E5%81%A5/">
+        <h2 class="post-title">复健</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/3/28
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="复健"><a href="#复健" class="headerlink" title="复健"></a>复健</h1><h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/d7xfpt83.png" alt=""></p>
+<h3 id="getline用法"><a href="#getline用法" class="headerlink" title="getline用法"></a>getline用法</h3><p>对于string s:getline(cin, s)</p>
+<p>对于char s[]:cin.getline(s, size)</p>
+<h3 id="用while和scanf读入多组数据"><a href="#用while和scanf读入多组数据" class="headerlink" title="用while和scanf读入多组数据"></a>用while和scanf读入多组数据</h3><p>scanf的返回值是读入的变量的个数,没有读入变量时会返回-1(EOF)而不是0</p>
+<p>所以不知道数据组数时的读入可以这样写</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(...) != EOF)</span><br></pre></td></tr></table></figure>
+<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><h3 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h3><p>拓扑排序常见的用法是求图是否有环,进行图上的DP</p>
+<p>但还有一种冷门的应用是判断给定的若干不等关系是否合法</p>
+<h4 id="eg-luogu-P1983-NOIP-2013-普及组-车站分级-amp-amp-P1347-排序-拓扑排序-不等关系"><a href="#eg-luogu-P1983-NOIP-2013-普及组-车站分级-amp-amp-P1347-排序-拓扑排序-不等关系" class="headerlink" title="eg.luogu P1983 [NOIP 2013 普及组] 车站分级&amp;&amp;P1347 排序   (拓扑排序 不等关系)"></a>eg.luogu P1983 [NOIP 2013 普及组] 车站分级&amp;&amp;P1347 排序   (拓扑排序 不等关系)</h4><p><strong>Solution</strong>:给定若干不等关系，可以考虑建图后进行拓扑排序判断是否存在解(或构造解)</p>
+<h3 id="trick题"><a href="#trick题" class="headerlink" title="trick题"></a>trick题</h3><h4 id="eg-luogu-P3916-图的遍历-trick"><a href="#eg-luogu-P3916-图的遍历-trick" class="headerlink" title="eg.luogu P3916 图的遍历(trick)"></a>eg.luogu P3916 图的遍历(trick)</h4><p><strong>Solution</strong>:考虑从一个出发计算它的答案复杂度为$O(N*(N+M))$，不如考虑从大到小尝试每个点都到达哪些点并确定这些点的$A()$，因此每个点只会被标记一次,于是复杂度变为$O(N+M)$</p>
+<h4 id="eg-luogu-P1363-幻象迷宫-trick"><a href="#eg-luogu-P1363-幻象迷宫-trick" class="headerlink" title="eg.luogu P1363 幻象迷宫(trick)"></a>eg.luogu P1363 幻象迷宫(trick)</h4><p><strong>Solution</strong>:先否定两种错误的想法:1.走出当前迷宫后在空地上则能走出</p>
+<p>反例:</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/uvovi1mh.png" alt=""></p>
+<p>2.能走到之前走到过的点（此想法没有考虑构成一个自环)</p>
+<p>反例:<img src="https://cdn.luogu.com.cn/upload/image_hosting/gsn0a6k5.png" alt=""></p>
+<p>正确想法:记录下第一次到达某个点的坐标时多少，如果再次抵达该点时坐标不同(排除了自环)，则证明最终可走出</p>
+<h2 id="树论"><a href="#树论" class="headerlink" title="树论"></a>树论</h2><h3 id="前-中-后序遍历"><a href="#前-中-后序遍历" class="headerlink" title="前/中/后序遍历"></a>前/中/后序遍历</h3><p>一种特殊的是已知前序和后序遍历不能求出唯一确定的中序遍历</p>
+<p>所以如果前序中出现AB,后序中出现BA 说明该点(A)只有一个儿子(B),于是中序遍历的情况数会*2</p>
+<h3 id="树的重心"><a href="#树的重心" class="headerlink" title="树的重心"></a>树的重心</h3><h4 id="重心的性质"><a href="#重心的性质" class="headerlink" title="重心的性质:"></a>重心的性质:</h4><p>1.以重心为树根时，所有子树大小不超过(&lt;=)全树大小的一半（反证法易证）</p>
+<p>2.树中所有点到某个点的距离和中，到重心时距离和最小的，如果有多个重心，那么他们的距离和一样。(调整法易证)</p>
+<p>3.当把两棵树<strong>通过一条边</strong>连接时，新的树的重心一定在原来两棵树的重心的路径上</p>
+<p>4.在一棵树上添加或删除一个节点，重心最多移动一条边的距离</p>
+<h4 id="重心的求法"><a href="#重心的求法" class="headerlink" title="重心的求法:"></a>重心的求法:</h4><h5 id="不带权"><a href="#不带权" class="headerlink" title="不带权:"></a>不带权:</h5><p>定义两个数组size[]和f[],size表示该点子树(包含自己)大小(以根节点为根),f[]表示该节点所有子树中大小的最大值(以该节点为根),遇到叶子节点时令size=1,其余节点回溯时计算出size,于是可以得到f[x]=max(max(size[to_x]),n-size[x]),其中n表示节点总数</p>
+<p>于是最终f[]最小的点即为树的重心</p>
+<h4 id="带权"><a href="#带权" class="headerlink" title="带权:"></a>带权:</h4><p>带权就在计算size时把权带上</p>
+<h3 id="树的直径"><a href="#树的直径" class="headerlink" title="树的直径"></a>树的直径</h3><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h3><p>设$s(i,j)$表示左上角为$(1,1)$右下角为$(i,j)$的矩形区域和为多少</p>
+<p>由容斥原理容易知道$s(i,j)=s(i-1,j)+s(i,j-1)-s(i-1,j-1)+a(i,j)$</p>
+<h4 id="luoguP1719-最大加权矩形"><a href="#luoguP1719-最大加权矩形" class="headerlink" title="luoguP1719 最大加权矩形"></a>luoguP1719 最大加权矩形</h4><p>根据二维前缀和可以得到一个$O(n^4)$的做法</p>
+<p>如果考虑一个trick,我们把矩阵压缩然后用最大子段和来计算则可以做到$O(n^3)$</p>
+<p>我们枚举$i,j$代表矩形最上面是哪一行和最下面是哪一行，将$i,j$两行之间的元素做竖向的累加</p>
+<p>然后将得到的这个一维数组做最大子段和</p>
+<p>显然这样可以枚举到所有矩形</p>
+<h3 id="二维差分"><a href="#二维差分" class="headerlink" title="二维差分"></a>二维差分</h3><p>设数组a的差分数组是b，定义$a[x,y]=\sum<em>{i=1}^{x}\sum</em>{j=1}^{y}b[i,j]$</p>
+<p>于是可以得到$b[x,y]=a[x,y]-a[x-1,y]-a[x,y-1]+a[x-1,y-1]$</p>
+<p>对$b[x,y]$+c的效果是左上角为$(x,y)$右下角为最右下的矩形范围内+c</p>
+<p>于是对左上角为$(x_1,y_1)$，右下角为$(x_2,y_2)$的矩形加c，</p>
+<p>则应该使$b[x_1,y_1]、b[x_2+1,y_2+1]$+c</p>
+<p>使$b[x_1,y_2+1]、b[x_2+1,y_1]$-c</p>
+<h4 id="hdu6514-Monitor"><a href="#hdu6514-Monitor" class="headerlink" title="hdu6514 Monitor"></a>hdu6514 Monitor</h4><p>先用二维差分把监控的控制区域填充好</p>
+<p>然后把被填充的部分修改为1，未被填充的部分为0，再做一次二维前缀和</p>
+<p>然后对于每此询问用二维前缀和查询</p>
+<h3 id="高阶差分"><a href="#高阶差分" class="headerlink" title="高阶差分"></a>高阶差分</h3><h4 id="二次差分"><a href="#二次差分" class="headerlink" title="二次差分"></a>二次差分</h4><h5 id="eg-P4231-三步必杀"><a href="#eg-P4231-三步必杀" class="headerlink" title="eg.P4231 三步必杀"></a>eg.P4231 三步必杀</h5><p>考虑给原数组加等差数列就是给一阶差分数组区间加差，也就是操作二阶差分数组</p>
+<h4 id="多项式高阶差分"><a href="#多项式高阶差分" class="headerlink" title="多项式高阶差分"></a>多项式高阶差分</h4><p>多项式每差分一次类似求一次导</p>
+<h4 id="eg-hdu1121Complete-the-Sequence"><a href="#eg-hdu1121Complete-the-Sequence" class="headerlink" title="eg.hdu1121Complete the Sequence"></a>eg.hdu1121Complete the Sequence</h4><p>设多项式的次数为D</p>
+<p>不断差分直至某次差分数列的长度为1（即差分n-1次），此时只有两种可能（除此之外的情况是无法计算后续数字的）</p>
+<p>一：值为0，说明已经求导了至少D+1次</p>
+<p>二：值非0，说明已经求导了D次，正好剩下常数项</p>
+<p>这时我们只要再最后填充上C个该值再往上做n-1前缀和就可以得到预测数字了</p>
+<h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><h4 id="eg-luoguP1197-JSOI2008-星球大战"><a href="#eg-luoguP1197-JSOI2008-星球大战" class="headerlink" title="eg.luoguP1197 [JSOI2008] 星球大战"></a>eg.luoguP1197 [JSOI2008] 星球大战</h4><p>正难则反，考虑不断加边</p>
+<p>应该枚举j~[0,k]，并不断按时间把边加回来</p>
+<p>考虑首先恢复一个点联通快数量+1、每成功merge一次联通快数量-1</p>
+<p>初始联通块数量n-k</p>
+<h3 id="带权并查集"><a href="#带权并查集" class="headerlink" title="带权并查集"></a>带权并查集</h3><h4 id="eg-hdu3038How-Many-Answers-Are-Wrong"><a href="#eg-hdu3038How-Many-Answers-Are-Wrong" class="headerlink" title="eg.hdu3038How Many Answers Are Wrong"></a>eg.hdu3038How Many Answers Are Wrong</h4><p>首先判断$l-1$和$r$是否在一个集合里</p>
+<p>如果不在一个集合里，考虑合并二者</p>
+<p>merge(l-1,r)根据向量加法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len[fx]=len[y]+d-len[x]</span><br></pre></td></tr></table></figure>
+<p>如果在一个集合里，做差求真实距离check</p>
+<h4 id="eg-luoguP1196-NOI2002-银河英雄传说"><a href="#eg-luoguP1196-NOI2002-银河英雄传说" class="headerlink" title="eg.luoguP1196 [NOI2002] 银河英雄传说"></a>eg.luoguP1196 [NOI2002] 银河英雄传说</h4><p>考虑无法直接维护len，所以要再开一个siz表示当前集合的大小</p>
+<p>合并时</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> fx=<span class="built_in">find</span>(x),fy=<span class="built_in">find</span>(y);</span><br><span class="line">  siz[fy]+=siz[fx];</span><br><span class="line">  siz[fx]=<span class="number">0</span>;</span><br><span class="line">  len[fx]=siz[fy];</span><br><span class="line">  fa[fx]=fy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意一定要先把fx=find(x),fy=find(y)。否则反复调用find函数会导致len累加错误</p>
+<h3 id="拓展域并查集"><a href="#拓展域并查集" class="headerlink" title="拓展域并查集"></a>拓展域并查集</h3><h4 id="eg-P1525-NOIP-2010-提高组-关押罪犯"><a href="#eg-P1525-NOIP-2010-提高组-关押罪犯" class="headerlink" title="eg.P1525 [NOIP 2010 提高组] 关押罪犯"></a>eg.P1525 [NOIP 2010 提高组] 关押罪犯</h4><p>当题目有多个状态，比如t1的非敌对和敌对，t2钥匙的使用和不使用,这时每个元素只开一个集合难以描述，所以考虑把每个元素开成两个集合(当然也可以更多)</p>
+<p>最终根据合并情况判断<strong>可行性</strong></p>
+<h3 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h3><p>大根堆或者小根堆</p>
+<h4 id="eg-loj6035-「雅礼集训-2017-Day4」洗衣服"><a href="#eg-loj6035-「雅礼集训-2017-Day4」洗衣服" class="headerlink" title="eg.loj6035. 「雅礼集训 2017 Day4」洗衣服"></a>eg.loj6035. 「雅礼集训 2017 Day4」洗衣服</h4><p>如果只考虑洗衣或者烘干，开一个小根堆维护当前耗时最短的机器即可</p>
+<p>二者合并应按照大配小来贪心，调整法可证</p>
+<h4 id="eg-qoj-4500-Loop"><a href="#eg-qoj-4500-Loop" class="headerlink" title="eg.qoj#4500. Loop"></a>eg.qoj#4500. Loop</h4><p>操作的含义就是将$[L,R]$区间内头部放到尾部，其余前进一位</p>
+<p>考虑怎样能使字典序尽量大</p>
+<p>显然是每次将最小且最靠左的数移到尾部（在之前已经被移到尾部的数前面），小根堆维护</p>
+<p>注意$k$可能比$n$大，要判断堆是否为空</p>
+<h4 id="eg-qoj-9528-New-Energy-Vehicle"><a href="#eg-qoj-9528-New-Energy-Vehicle" class="headerlink" title="eg.qoj#9528. New Energy Vehicle"></a>eg.qoj#9528. New Energy Vehicle</h4><p>贪心，每次优先用马上就能被充电的电池</p>
+<p>只开一个堆不太好维护，可以开两个堆分分别别存还有电和已经没电的电池，以坐标为关键字，小根堆维护</p>
+<p>每次到达一个充电站，能被充电的电池一定在两个堆中其中一个堆的堆顶</p>
+<p>注意vector.size()返回值是无符号类型的，要强转为int再做减法</p>
+<h4 id="eg-luoguP2827-NOIP-2016-提高组-蚯蚓"><a href="#eg-luoguP2827-NOIP-2016-提高组-蚯蚓" class="headerlink" title="eg.luoguP2827 [NOIP 2016 提高组] 蚯蚓"></a>eg.luoguP2827 [NOIP 2016 提高组] 蚯蚓</h4><p>首先考虑如何处理$q$的问题，正难则反，我们给刚分裂的蚯蚓长度-q，其余保持不变来替代+q操作</p>
+<p>直接开小根堆模拟复杂度$O(M*log(N+M))$无法通过极限数据</p>
+<p>但是可以证明$\lfloor px\rfloor$和$x-\lfloor px\rfloor$分别都是单调的</p>
+<p>所以直接开三个普通队列分别存三种蚯蚓就可以做到线形了</p>
+<h4 id="eg-luoguP7913-CSP-S-2021-廊桥分配"><a href="#eg-luoguP7913-CSP-S-2021-廊桥分配" class="headerlink" title="eg.luoguP7913 [CSP-S 2021] 廊桥分配"></a>eg.luoguP7913 [CSP-S 2021] 廊桥分配</h4><p>当分配的廊桥数量确定时整个过程可以用小根堆模拟</p>
+<p>开两个优先队列q1,q2 q1存空闲的廊桥编号 q2存被占用的廊桥编号和其可用的时间</p>
+<p>考虑枚举廊桥的分配，那么我们需要线形的合并答案</p>
+<p>可以发现随着廊桥数量的增加，停靠的飞机数是不降的，所以可以开ans1[x]数组表示停在编号x的飞机数量，最后再做前缀和</p>
+<h3 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h3><h4 id="eg-loj-10178-「一本通-5-5-例-4」旅行问题"><a href="#eg-loj-10178-「一本通-5-5-例-4」旅行问题" class="headerlink" title="eg.loj#10178. 「一本通 5.5 例 4」旅行问题"></a>eg.loj#10178. 「一本通 5.5 例 4」旅行问题</h4><p>先考虑顺时针，先破环为链</p>
+<p>设$x[i]=p[i]-d[i]$，再对$x[]$求前缀和</p>
+<p>对于点$i$出发到达$i+n$可以等价为前缀和数组$sumx[]$在$[i,i+n]$均不小于$0$</p>
+<p>于是只要求$sumx[]$在$[i,i+n]$的最小值再check$min-sumx[i-1]$是否大于$0$即可</p>
+<p>发现此过程可以用长度为n的单调队列优化</p>
+<p>逆时针同理</p>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><h4 id="eg-luoguP5658-CSP-S-2019-括号树"><a href="#eg-luoguP5658-CSP-S-2019-括号树" class="headerlink" title="eg.luoguP5658 [CSP-S 2019] 括号树"></a>eg.luoguP5658 [CSP-S 2019] 括号树</h4><p>首先答案要做前缀和</p>
+<p>考虑如果新加入的是(，那么直接压进栈中即可，不会产生新贡献</p>
+<p>如果新加入的是)，考虑新增的贡献有两部分，一部分是1，另一部分是与当前)匹配的(前方第一个括号的贡献，因为可以把这一部分与新增的拼起来</p>
+<p>注意dfs时要记录被弹出栈的元素，后面回溯要用到</p>
+<h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><h3 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h3><h4 id="gcd-amp-lcm"><a href="#gcd-amp-lcm" class="headerlink" title="gcd&amp;lcm"></a>gcd&amp;lcm</h4><h5 id="结合律"><a href="#结合律" class="headerlink" title="结合律"></a>结合律</h5><p>可以考虑维护前缀/后缀gcd(lcm)进行一些操作</p>
+<h5 id="eg-luoguP2926-USACO08DEC-Patting-Heads-S"><a href="#eg-luoguP2926-USACO08DEC-Patting-Heads-S" class="headerlink" title="eg.luoguP2926 [USACO08DEC] Patting Heads S"></a>eg.luoguP2926 [USACO08DEC] Patting Heads S</h5><p>对于这种题目有两种方法，一种是枚举因数,一种是枚举倍数</p>
+<p>如果枚举因数那么复杂度是<script type="math/tex">O(n\sqrt{A})</script>,其中A表示值域</p>
+<p>如果枚举倍数那么复杂度是<script type="math/tex">O(\sum_{i=1}^{n}\frac{n}{i})=O(nlogn)</script></p>
+<p>所以要根据n和A的范围来选择做法</p>
+<h5 id="eg-luoguP1072-NOIP-2009-提高组-Hankson-的趣味题"><a href="#eg-luoguP1072-NOIP-2009-提高组-Hankson-的趣味题" class="headerlink" title="eg.luoguP1072 [NOIP 2009 提高组] Hankson 的趣味题"></a>eg.luoguP1072 [NOIP 2009 提高组] Hankson 的趣味题</h5><p>如果枚举因数则复杂度为<script type="math/tex">O(\sqrt{b1})<=O(\sqrt{2e9})</script></p>
+<p>如果枚举倍数则复杂度为<script type="math/tex">O(\frac{b1}{a1})<=O(2e9)</script></p>
+<p>故选择枚举因数再验证</p>
+<h4 id="算数基本定理-质因子"><a href="#算数基本定理-质因子" class="headerlink" title="算数基本定理(质因子)"></a>算数基本定理(质因子)</h4><h5 id="除数函数"><a href="#除数函数" class="headerlink" title="除数函数"></a>除数函数</h5><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/8bnmdb2w.png" alt=""></p>
+<h5 id="除数和函数"><a href="#除数和函数" class="headerlink" title="除数和函数"></a>除数和函数</h5><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/1375mkfd.png" alt=""></p>
+<h6 id="eg-P1593-因子和"><a href="#eg-P1593-因子和" class="headerlink" title="eg.P1593 因子和"></a>eg.P1593 因子和</h6><p>对a进行质因数分解,然后每个因子个数再乘上b,最后用除数和函数的计算方法计算因子和</p>
+<h4 id="因子"><a href="#因子" class="headerlink" title="因子"></a>因子</h4><h5 id="eg-P1414-又是毕业季II"><a href="#eg-P1414-又是毕业季II" class="headerlink" title="eg.P1414 又是毕业季II"></a>eg.P1414 又是毕业季II</h5><p>考虑对所有数进行因数分解(注意不是质因数分解)，统计每个因数的出现次数和出现过某次数的最大因子是谁，边输出边做后缀最大值即可</p>
+<h4 id="线性方程"><a href="#线性方程" class="headerlink" title="线性方程"></a>线性方程</h4><h5 id="求一组解"><a href="#求一组解" class="headerlink" title="求一组解"></a>求一组解</h5><p>定理1:对于整数$a,b,c$，$ax+by=c$有<strong>整数解</strong>当且仅当$gcd(a,b)|c$</p>
+<p>定理2(裴蜀定理):对于整数$a,b$，设他们的最大公约数$gcd(a,b)=d$，一定存在一组<strong>整数</strong>$(x,y)$使得$ax+by=d$</p>
+<p>exgcd:</p>
+<p>由定理12我们知道如果想要求解$ax+by=c$的一组整数解，我们只需要先求出$ax+by=gcd(a,b)=d$的解$(x,y)$再将这组解变换为$(x<em>\frac{c}{gcd(a,b)},y</em>\frac{c}{gcd(a,b)})$</p>
+<p>模仿gcd的过程，递归求解$bx+(a\%b)y=d$的一组解${x<em>{0},y</em>{0}}$</p>
+<p>当$a\%b=0(a=b,b=a\%b)$时达到递归边界，此时显然有解$x=\frac{d}{a}=1$（此时$d=gcd(a,0)=a$），$y$任意取（但实现过程中要把$y$取成$0$可以避免溢出问题）</p>
+<p>接下来就是如何把<script type="math/tex">(x_{0},y_{0})</script>推回去，由于没有像$gcd(a,b)=gcd(b,a\%b)$这样的性质，所以<script type="math/tex">(x,y)!=(x_{0},y_{0})</script></p>
+<p>根据$bx<em>{0}+(a\%b)y</em>{0}=d$，我们把$a\%b$写成$a-\lfloor\frac{a}{b}\rfloor*b$</p>
+<p>打开整理得$ay<em>{0}+b(x</em>{0}-\lfloor\frac{a}{b}\rfloor*y_{0})=d$</p>
+<p>于是$(x,y)=(y<em>{0},x</em>{0}-\lfloor\frac{a}{b}\rfloor*y_{0})$</p>
+<p>这个递归过程也就证明了裴蜀定理是正确的</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;x, <span class="type">int</span> &amp;y)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(b == <span class="number">0</span>)&#123;</span><br><span class="line">    x = <span class="number">1</span>, y = <span class="number">0</span>;<span class="comment">//y=0防止溢出，可以证明</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">exgcd</span>(b, a%b, y, x);</span><br><span class="line">  <span class="comment">//此时x=y0, y=x0</span></span><br><span class="line">  y -= a/b*x;<span class="comment">//y0=x0-floor(a/b)*y0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="求所有解"><a href="#求所有解" class="headerlink" title="求所有解"></a>求所有解</h5><p>考虑求出$a\Delta x+b\Delta y=0$的所有解，那么$(x+k<em>\Delta x,y+k</em>\Delta y)$($k$为任意整数)就是原方程的所有解</p>
+<p>首先求出$a\Delta x+b\Delta y=0$最小的一组<strong>非0解</strong>$(x<em>{min},y</em>{min})$(最小指<script type="math/tex">x,y</script>的绝对值最小)</p>
+<p>考虑到$|ax|=|by|$则$ax$和$by$一定都为$a,b$的倍数，所以只需要他们分别达到$a,b$的最小公倍数就可以保证$x,y$的绝对值尽可能小</p>
+<p>根据$lcm(x,y)<em>gcd(x,y)=x</em>y$</p>
+<p>所以$(x<em>{min},y</em>{min})=(lcm(a,b)/a,-lcm(a,b)/b)=(b/gcd(a,b),-a/gcd(a,b))$</p>
+<p><strong>可以证明$a\Delta x+b\Delta y=0$的所有解$(x,y)$都是$(x<em>{min},y</em>{min})$的整数倍</strong>，于是我们就求出$a\Delta x+b\Delta y=0$的所有解</p>
+<h5 id="eg-P1516-青蛙的约会"><a href="#eg-P1516-青蛙的约会" class="headerlink" title="eg.P1516 青蛙的约会"></a>eg.P1516 青蛙的约会</h5><p>根据题意我们要求解$k(m-n)+tL=y-x$中$k$的最小正数解</p>
+<p>我们先保证$m-n$为正数，如若不然的话就将方程变为$k(n-m)+tL=x-y$</p>
+<p>然后我们求得$k$的一个特解$k_0$和方程$=0$的最小正数解$k’=lcm(a,b)/a$</p>
+<p>当$k_0 &gt;0$时答案为$k_0 \% k’$</p>
+<p>当$k_0 &lt;0$时答案为$k_0 + abs(\lfloor\frac{k_0}{k’}\rfloor)*k’$</p>
+<h4 id="拆分数"><a href="#拆分数" class="headerlink" title="拆分数"></a>拆分数</h4><h5 id="eg-P2789-直线交点数"><a href="#eg-P2789-直线交点数" class="headerlink" title="eg.P2789 直线交点数"></a>eg.P2789 直线交点数</h5><p>用dfs对$n$进行拆分，拆分出的每部分代表互相平行且不与其他组的直线平行的直线数量</p>
+<p>简单计数即可</p>
+<h4 id="乘法逆元"><a href="#乘法逆元" class="headerlink" title="乘法逆元"></a>乘法逆元</h4><p>根据模意义下$a*\frac{1}{a}\equiv1(mod\;p)$</p>
+<p>我们要找的逆元满足$a*x\equiv1(mod\;p)$</p>
+<h5 id="1-exgcd"><a href="#1-exgcd" class="headerlink" title="1.exgcd"></a>1.exgcd</h5><p>将同余号展开$a<em>x=1+p</em>y$    移项有$a<em>x+p</em>y=1$</p>
+<p>我们求出一组特解，把$(x_0\%p+p)\%p$当作逆元即可</p>
+<p>并且我们得到逆元存在的条件是$gcd(a,p)=1$，即$a$与$p$互质</p>
+<h5 id="2-费马小定理"><a href="#2-费马小定理" class="headerlink" title="2.费马小定理"></a>2.费马小定理</h5><p>根据费马小定理，若$p$是质数，且$a$不是$p$的倍数，则$a^{p-1}\equiv1(mod\;p)$</p>
+<p>所以如果$p$是质数，且$a$不是$p$的倍数，则$a*a^{p-2}\equiv a^{p-1}\equiv1(mod\;p)$</p>
+<p>所以$a^{p-2}$就是要求的乘法逆元，用快速幂即可</p>
+<p>如果$a$是$p$的倍数，那么逆元不存在</p>
+<p><strong>可以证明：在大于等于0，小于p的范围内，模p的逆元（若存在）是唯一的</strong></p>
+<h5 id="3-逆推"><a href="#3-逆推" class="headerlink" title="3.逆推"></a>3.逆推</h5><p>根据$\frac{1}{k!}=\frac{1}{(k+1)!}*(k+1)$和$\frac{1}{k}=\frac{(k-1)!}{k!}$</p>
+<p>所以我们先求出$1-n$的阶乘记作$fac[]$</p>
+<p>然后用exgcd/费马小定理求出$n$的逆元$\frac{1}{n}$记作$ifac[n]$</p>
+<p>然后根据$ifac[n]=ifac[n+1]*(n+1)$逆推出所有的$ifac[]$</p>
+<p>最后$inv[n]=fac[n-1]*ifac[n]$求出所有数的逆元</p>
+<h5 id="4-递推"><a href="#4-递推" class="headerlink" title="4.递推"></a>4.递推</h5><p>不如逆推易懂故仅了解</p>
+<h4 id="同余方程"><a href="#同余方程" class="headerlink" title="同余方程"></a>同余方程</h4><h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><h4 id="eg-luoguP2638-安全系统"><a href="#eg-luoguP2638-安全系统" class="headerlink" title="eg.luoguP2638 安全系统"></a>eg.luoguP2638 安全系统</h4><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><h3 id="折半搜索"><a href="#折半搜索" class="headerlink" title="折半搜索"></a>折半搜索</h3><p>双向bfs或双向dfs，可以使复杂度中的指数减半</p>
+<h4 id="luoguP4799-CEOI-2015-世界冰球锦标赛-Day2"><a href="#luoguP4799-CEOI-2015-世界冰球锦标赛-Day2" class="headerlink" title="luoguP4799 [CEOI 2015] 世界冰球锦标赛 (Day2)"></a>luoguP4799 [CEOI 2015] 世界冰球锦标赛 (Day2)</h4><p>如果直接搜索，复杂度会达到$O(2^{40})$，于是我们考虑折半搜索</p>
+<p>对于前$\frac{n}{2}$个比赛搜索并将答案存储在$ans1[]=x$中表示花费$x$的方案</p>
+<p>然后对后$\frac{n}{2}$个比赛搜索并将答案存储在$ans2[]=x$中表示剩余$x$</p>
+<p>将ans1或ans2排序后枚举另外一个二分计算答案</p>
+<p>时间复杂度$O(2^{\frac{n}{2}}*log(n))$</p>
+<h4 id="luoguP10487-Nightmare-II"><a href="#luoguP10487-Nightmare-II" class="headerlink" title="luoguP10487 Nightmare II"></a>luoguP10487 Nightmare II</h4><p>双向bfs有用一个队列和用两个队列两种写法，都是对vis数组用不同的标记</p>
+<p>这个题目由于M和G每轮移动的步数不同所以应该开两个队列，M的每轮扩展三次，G的每轮扩展一次</p>
+<p>对于鬼魂的处理用曼哈顿距离即可，特别注意是鬼魂先扩展之后才开始移动</p>
+<p>注意按题意来说M和G每轮是可以选择不移动的</p>
+<p>最后注意不能提前判断下一轮是否会被鬼魂碰到，因为可能在这轮就能相遇</p>
+<h4 id="hdu1195Open-the-Lock"><a href="#hdu1195Open-the-Lock" class="headerlink" title="hdu1195Open the Lock"></a>hdu1195Open the Lock</h4><p>可以双向bfs，选择开一个队列或者两个队列均可</p>
+<h3 id="flood-fill"><a href="#flood-fill" class="headerlink" title="flood fill"></a>flood fill</h3><h4 id="CF2034C-rapped-in-the-Witch’s-Labyrinth"><a href="#CF2034C-rapped-in-the-Witch’s-Labyrinth" class="headerlink" title="CF2034C rapped in the Witch’s Labyrinth"></a>CF2034C rapped in the Witch’s Labyrinth</h4><p>求不可行点困难，正难则反求可行点</p>
+<p>从内部的一个点向边界搜索是否可行是困难的，于是我们从边界（<strong>不包括$?$点，因为我们希望不可行点尽量多</strong>)向内部搜索可以达到的点</p>
+<p>对于$?$点，如果他的四周至少有一个不可行点（包括其他$?$点），那么他就不可行（由于我们希望不可行点尽量多）</p>
+<p><strong>注意泛洪时不向$?$点扩展</strong>（因为我们希望不可行点尽量多）</p>
+<h4 id="P11454-USACO24DEC-2D-Conveyer-Belt-S"><a href="#P11454-USACO24DEC-2D-Conveyer-Belt-S" class="headerlink" title="P11454 [USACO24DEC] 2D Conveyer Belt S"></a>P11454 [USACO24DEC] 2D Conveyer Belt S</h4><p>如果仿照上题的做法有一个$O(n^2Q)$的做法</p>
+<p>我们考虑离线后逆序来做</p>
+<p>按照相同的从边界（<strong>包括$?$点，因为我们希望不可行点尽量少</strong>）向内部泛洪的做法</p>
+<p><strong>注意泛洪时向$?$点扩展</strong>（因为我们希望不可行点尽量少）</p>
+<p>考虑如何删除一个被定下来的点</p>
+<p>Case1:如果它本身就可行，那么被删除后我们依然可以让他可行，答案不变</p>
+<p>Case2:如果它本身不可行且周围的四个点都不可行，那么我们怎么修改它也依然不可行，答案不变</p>
+<p>Case3:如果它本身不可行但周围至少有一个点可行，那么我们就需要计算修改该点之后导致新增的可行点有多少，答案减去这些新增的可行点</p>
+<h3 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h3><h4 id="luoguP2217-HAOI2007-分割矩阵"><a href="#luoguP2217-HAOI2007-分割矩阵" class="headerlink" title="luoguP2217 [HAOI2007] 分割矩阵"></a>luoguP2217 [HAOI2007] 分割矩阵</h4><p>设$dp[a][b][c][d][x]$表示左上角为$(a,b)$，右下角为$(c,d)$切割了$x$次的均方差最小值</p>
+<p>转移枚举以哪条线切割、枚举$x$分给切割的两部分，用前缀和更新均方差即可</p>
+<p>注意要求最小值，但又要记忆化</p>
+<p>所以要在判断是否被记忆化之后再把初值设为正无穷</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="qoj14936-Message-from-the-Past"><a href="#qoj14936-Message-from-the-Past" class="headerlink" title="qoj14936. Message from the Past"></a>qoj14936. Message from the Past</h4><p>考虑到一定有解且$n=8$于是可以dfs出答案</p>
+<h4 id="luoguP8817-CSP-S-2022-假期计划"><a href="#luoguP8817-CSP-S-2022-假期计划" class="headerlink" title="luoguP8817 [CSP-S 2022] 假期计划"></a>luoguP8817 [CSP-S 2022] 假期计划</h4><p>首先用bfs求全源最短路，并把能在$k$步内互达的点对预处理好</p>
+<p>暴力枚举是$O(n^4)$的复杂度显然不能接受，我们考虑枚举中间两个点，也就是b和c，复杂度为$O(n^2)$。</p>
+<p>考虑如何求a和d，我们可以预处理出与每个点k可达且与家k可达价值前m大的点</p>
+<p>那么m到底要取多少呢，假如考虑a，那么a可能与c重复，可能与d重复，所以m要取3才能保证不冲突</p>
+<h4 id="P3322-SDOI2015-排序"><a href="#P3322-SDOI2015-排序" class="headerlink" title="P3322 [SDOI2015] 排序"></a>P3322 [SDOI2015] 排序</h4><p>首先要弄清题目中的”操作位置不同”是什么意思，这是指某一个交换操作在交换操作序列中的位置不同</p>
+<p>所以我们要注意到如果某个操作序列可行，那么其任意排列也可行</p>
+<p>也就是每个操作只有选与不选两种</p>
+<p>dfs每个操作是否选即可</p>
+<p>细节很多，最要注意的是存储哪两段非递增的数组要开在dfs里而不是开在全局里</p>
+<p>不然dfs不同层会相互冲突</p>
+<p>有一个非常妙的地方：我们已经知道这个序列是由 $1∼2^n$ 组成的了。</p>
+<p>因此在判断的时候只需要循环，看第i块的第一个数是否和第j块的第一个数正好差一个块长就好了。</p>
+<h4 id="qoj5575-Knight’s-Tour-Redux"><a href="#qoj5575-Knight’s-Tour-Redux" class="headerlink" title="qoj5575. Knight’s Tour Redux"></a>qoj5575. Knight’s Tour Redux</h4><p>用bfs搜出n较小时的方案</p>
+<p>发现n=6时有一种特别的走法{1,1},{2,4},{5,5},{6,2},{3,3},{4,6} 这种走法最后可以走到{7,7}</p>
+<p>于是问题可以缩小到子问题</p>
+<p>但由于n=2,3,4时没有可行的方案</p>
+<p>所以我们能解决的最小子问题是5,6,7,8,9,10,11</p>
+<p>对于比这些问题大的问题我们每次缩小6直到达到最小子问题再求解</p>
+<h2 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h2><h4 id="loj10007线段"><a href="#loj10007线段" class="headerlink" title="loj10007线段"></a>loj10007线段</h4><p>对于一条线段而言，它越早结束等同于它与其他线段重合的可能越小，所以我们按r升序排序，能选则选</p>
+<h4 id="luoguP1824-USACO05FEB-进击的奶牛-Aggressive-Cows-G"><a href="#luoguP1824-USACO05FEB-进击的奶牛-Aggressive-Cows-G" class="headerlink" title="luoguP1824 [USACO05FEB] 进击的奶牛 Aggressive Cows G"></a>luoguP1824 [USACO05FEB] 进击的奶牛 Aggressive Cows G</h4><p>首先二分答案，距离确定之后，从第一间牛舍开始能选则选</p>
+<p>可能会有疑惑：第一间牛舍为什么一定要选</p>
+<p>这样想，如果存在不选第一间牛舍的方案，那么把该方案最左边的牛舍变为第一间显然也是合法的</p>
+<h4 id="louguP8818-CSP-S-2022-策略游戏"><a href="#louguP8818-CSP-S-2022-策略游戏" class="headerlink" title="louguP8818 [CSP-S 2022] 策略游戏"></a>louguP8818 [CSP-S 2022] 策略游戏</h4><p>首先假设二者可选区间内都不存在0</p>
+<p>如果L选择的x&gt;0，那么Q会选择区间中的最小值，如果这个最小值&gt;0，那么L会选最大的正数，如果这个最小值&lt;0，L会选最小的正数</p>
+<p>如果L选择的x<0，那么Q会选择区间中的最大值，如果这个最大值>0，那么L会选最大的负数，如果这个最大值&lt;0，那么L会选择最小的负数</p>
+<p>用ST表维护x最大正数（最大值）、最小正数、最大负数、最小负数（最小值）；y最大值、y最小值</p>
+<p>接下来考虑有0怎么办，如果x有0，那么目前最优解和0取最大值</p>
+<p>如果y有0，目前最优解和0取最小值</p>
+<h4 id="luoguP7915-CSP-S-2021-回文"><a href="#luoguP7915-CSP-S-2021-回文" class="headerlink" title="luoguP7915 [CSP-S 2021] 回文"></a>luoguP7915 [CSP-S 2021] 回文</h4><p>首先把问题转化一下</p>
+<p>考虑枚举第一步是L还是R</p>
+<p>假如第一次是L，那么在序列中找到与$a_1$相同的$a_x$，将$a_1-&gt;a_x$放入到一个栈中，将$a_x-&gt;a_n$放入到一个栈中</p>
+<p>每次操作为从两个栈顶中弹出一个，并且在栈底中找到与其相同的元素弹出</p>
+<p>为了使字典序小，优先选择L操作</p>
+<h2 id="二分-三分"><a href="#二分-三分" class="headerlink" title="二分/三分"></a>二分/三分</h2><h4 id="loj10013-曲线"><a href="#loj10013-曲线" class="headerlink" title="loj10013.曲线"></a>loj10013.曲线</h4><p>二次项系数大于零的二次函数是一个单峰函数，对一组这样的函数在各点处取最值得到的函数也会是一个单峰函数，所以用浮点数三分找最小值点即可</p>
+<h4 id="luoguP5931-清华集训-2015-灯泡"><a href="#luoguP5931-清华集训-2015-灯泡" class="headerlink" title="luoguP5931 [清华集训 2015] 灯泡"></a>luoguP5931 [清华集训 2015] 灯泡</h4><p>根据数学知识得到答案的表达式是$x+\frac{h-x}{H-x}*D$其中$x$表示人离右边墙的距离</p>
+<p>根据数学知识我们知道在定义域内这是对勾函数的一部分，是一个单峰函数，利用浮点数三分找最值即可</p>
+<h4 id="luoguP1250-种树"><a href="#luoguP1250-种树" class="headerlink" title="luoguP1250 种树"></a>luoguP1250 种树</h4><p>显然把树种在重叠区域最好，所以我们先按r排序，对于每次操作先判断是否已经合法</p>
+<p>如果不合法，从右端点开始往前种树直至合法，这样可以让树尽可能重叠</p>
+<p>查询和修改操作用线段树和线段树上二分优化，复杂度$O(nlogn)$</p>
+<h4 id="luoguP9186-USACO23OPEN-Milk-Sum-S"><a href="#luoguP9186-USACO23OPEN-Milk-Sum-S" class="headerlink" title="luoguP9186 [USACO23OPEN] Milk Sum S"></a>luoguP9186 [USACO23OPEN] Milk Sum S</h4><p>对于每次修改，首先二分出被修改的数之前在排序好的数组中的位置</p>
+<p>然后二分出修改之后的数应该排在哪个位置</p>
+<p>用前缀和进行修改即可</p>
+<h4 id="luoguP2571-SCOI2010-传送带"><a href="#luoguP2571-SCOI2010-传送带" class="headerlink" title="luoguP2571 [SCOI2010] 传送带"></a>luoguP2571 [SCOI2010] 传送带</h4><p>可以把整段路程分为三部分，从A出发在AB上走到E，从D出发在DC上走到F，从E走到F</p>
+<p>于是三分套三分，三分出E和F的位置</p>
+<p>怎么三分能避免绝大多数问题呢（斜率为0、斜率不存在），三分AE占AB的比例</p>
+<h4 id="luoguP9982-USACO23DEC-Haybale-Distribution-G"><a href="#luoguP9982-USACO23DEC-Haybale-Distribution-G" class="headerlink" title="luoguP9982 [USACO23DEC] Haybale Distribution G"></a>luoguP9982 [USACO23DEC] Haybale Distribution G</h4><p>整数三分</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> l=<span class="number">0</span>,r=<span class="number">1e6</span>;</span><br><span class="line"><span class="keyword">while</span>(r-l&gt;<span class="number">2</span>)&#123;</span><br><span class="line">  <span class="type">int</span> lm=l+(r-l)/<span class="number">3</span>,rm=r-(r-l)/<span class="number">3</span>;</span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">cal</span>(rm)&gt;=<span class="built_in">cal</span>(lm)) r=rm;</span><br><span class="line">  <span class="keyword">else</span> l=lm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="luoguP5815-CQOI2010-扑克牌"><a href="#luoguP5815-CQOI2010-扑克牌" class="headerlink" title="luoguP5815 [CQOI2010] 扑克牌"></a>luoguP5815 [CQOI2010] 扑克牌</h4><p>二分答案，计算出需要使用的J牌个数，如果个数大于m或者个数大于当前check的答案（因为每幅牌中不能有两个J）都是不合法的</p>
+<h2 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h2><h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><p>如果不和其他数据结构结合使用，双指针维护区间信息的最简单模式就是维护具有一定单调性，新增和删去一个元素都很方便处理的信息，就比如正数的和、正整数的积等等。</p>
+<p>常见写法是</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//bool为与题意有关的判断式</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> l=<span class="number">1</span>,r=<span class="number">0</span>;l&lt;=n;)&#123;</span><br><span class="line">  <span class="keyword">while</span>(<span class="type">bool</span>&amp;&amp;r&lt;n)&#123;</span><br><span class="line">    r++;</span><br><span class="line">    r改变对维护的信息的影响</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(<span class="type">bool</span>) <span class="keyword">break</span>;</span><br><span class="line">  l ++;</span><br><span class="line">  l改变对维护的信息的影响</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//统计答案需要看求的是极值还是数量来决定在哪里求</span></span><br></pre></td></tr></table></figure>
+<h4 id="eg-创造单调性-POJ2566Bound-Found"><a href="#eg-创造单调性-POJ2566Bound-Found" class="headerlink" title="eg.创造单调性 POJ2566Bound Found"></a>eg.创造单调性 POJ2566Bound Found</h4><p>原数列的和没有单调性，并且也不能对原序列进行排序，于是考虑原数列的前缀和排序后具有单调性，只需将前缀和和编号作为一个pair再进行排序，而且因为要求的是区间和的<strong>绝对值</strong>，所以可以考虑进行双指针。此时维护的信息时区间右端点和左端点的差值</p>
+<p>注意此题的细节问题:由于维护的是前缀和区间，所以$l!=r$实现时要注意处理</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(l=<span class="number">0</span>,r=<span class="number">0</span>;l&lt;n;)&#123;<span class="comment">//注意尺取的是前缀和，所以l!=r，于是r初始为0，终止条件l&lt;n</span></span><br><span class="line">  <span class="keyword">while</span>(((b[r].x-b[l].x&lt;t)||l==r)&amp;&amp;r&lt;n)&#123;<span class="comment">//注意l!=r</span></span><br><span class="line">    r ++;</span><br><span class="line">    <span class="built_in">update</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(b[r].x-b[l].x&lt;t) <span class="keyword">break</span>;</span><br><span class="line">  l ++;</span><br><span class="line">  <span class="keyword">if</span>(l != r) <span class="built_in">update</span>();<span class="comment">//注意l!=r</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="eg-发现单调性-Atcoder-4142-Xor-Sum-2"><a href="#eg-发现单调性-Atcoder-4142-Xor-Sum-2" class="headerlink" title="eg.发现单调性 Atcoder 4142 Xor Sum 2"></a>eg.发现单调性 Atcoder 4142 Xor Sum 2</h4><p>考虑何时满足$axorb=a+b$ ，显然是$a,b$的二进制1的位置都不一样</p>
+<p>显然这个条件数越少越容易满足，所以有单调性</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(ll l=<span class="number">1</span>,r=<span class="number">0</span>,sum=<span class="number">0</span>,xorsum=<span class="number">0</span>;l&lt;=n;)&#123;</span><br><span class="line">  <span class="keyword">while</span>((sum+a[r<span class="number">+1</span>]==(xorsum^a[r<span class="number">+1</span>]))&amp;&amp;r&lt;n)&#123;</span><br><span class="line">    r ++;</span><br><span class="line">    sum += a[r];</span><br><span class="line">    xorsum ^= a[r];</span><br><span class="line">  &#125;</span><br><span class="line">  ans += r-l<span class="number">+1</span>;</span><br><span class="line">  l ++;</span><br><span class="line">  sum -= a[l<span class="number">-1</span>];</span><br><span class="line">  xorsum ^= a[l<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="eg-hdu5358-First-One"><a href="#eg-hdu5358-First-One" class="headerlink" title="eg.hdu5358 First One"></a>eg.hdu5358 First One</h4><p>考虑枚举$log_{2}{S(i,j)}+1$为$k$</p>
+<p>然后用尺取法求满足$2^{k-1}&lt;=S(i,j)&lt;=2^{k}$的的区间</p>
+<p>由于区间和既有上限也有下限，所以如果我们枚举左指针的话，需要开两个右指针</p>
+<p>实现上也有很多细节</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">F</span>(i, <span class="number">1</span>, <span class="number">35</span>)&#123;<span class="comment">//i == log2[]+1</span></span><br><span class="line">  ll minn, maxn; ll sum1 = <span class="number">-1</span>, sum2 = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span>(i==<span class="number">1</span>) minn = <span class="number">0</span>, maxn = <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">else</span> minn = pw[i<span class="number">-1</span>], maxn = pw[i];</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> l=<span class="number">1</span>,r1=<span class="number">0</span>,r2=<span class="number">0</span>;l&lt;=n;)&#123;</span><br><span class="line">    <span class="keyword">while</span>(sum1&lt;minn&amp;&amp;r1&lt;n)&#123;<span class="comment">//由于minn可能取到0，所以当sum1为0时要及时将其置为一个小于0的数</span></span><br><span class="line">      r1++;</span><br><span class="line">      <span class="keyword">if</span>(sum1&lt;<span class="number">0</span>) sum1=<span class="number">0</span>;</span><br><span class="line">      sum1 += a[r1];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(sum2&lt;maxn&amp;&amp;r2&lt;n) r2++, sum2 += a[r2];</span><br><span class="line">    <span class="keyword">if</span>(sum1&lt;minn) <span class="keyword">break</span>;</span><br><span class="line">    <span class="comment">//if(sum2&lt;maxn) break; 注意r2不一定必须要存在，不存在时取右端点即可</span></span><br><span class="line">    <span class="type">int</span> L = l+r1, R = l+r2;</span><br><span class="line">    <span class="keyword">if</span>(sum2&gt;=maxn) R --;</span><br><span class="line">    <span class="keyword">if</span>(R&gt;=L) ans += <span class="number">1ll</span>*i*(<span class="number">1ll</span>*(L+R)*(R-L<span class="number">+1</span>)/<span class="number">2</span>);</span><br><span class="line">    sum1 -= a[l], sum2 -= a[l];</span><br><span class="line">    <span class="keyword">if</span>(!sum1) sum1=<span class="number">-1</span>;</span><br><span class="line">    l ++;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h2><h3 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h3><h4 id="区间染色和区间合并离散化"><a href="#区间染色和区间合并离散化" class="headerlink" title="区间染色和区间合并离散化"></a>区间染色和区间合并离散化</h4><p>对于区间染色和区间合并问题，不能简单离散化，因为这样会导致中间的部分值缺失，所以我们需要将每个位置的左右点都加进去保证不会覆盖。</p>
+<h5 id="eg-hdu1199-Color-the-Ball"><a href="#eg-hdu1199-Color-the-Ball" class="headerlink" title="eg.hdu1199 Color the Ball"></a>eg.hdu1199 Color the Ball</h5><p>由于最后要求最长连续白球区间，如果只离散化$x$和$y$，那么遇到像1 2 w 5 6 w这种会把1~6都当作白色区间</p>
+<p>所以我们考虑把端点的左右点也加入（这样最保险），此题只要加入右端点的右边点即可</p>
+<h4 id="线的离散化-面积问题（扫描线思想）"><a href="#线的离散化-面积问题（扫描线思想）" class="headerlink" title="线的离散化-面积问题（扫描线思想）"></a>线的离散化-面积问题（扫描线思想）</h4><h5 id="hdu3634-City-Planning"><a href="#hdu3634-City-Planning" class="headerlink" title="hdu3634 City Planning"></a>hdu3634 City Planning</h5><p>第一想法是开二维差分和二维前缀和来做，但是空间复杂度$O(（10000）^2)$无法承受</p>
+<p>发现$n&lt;=20$特别小，于是可以离散化所有的点</p>
+<p>然后枚举$i,j$表示离散化后的$x,y$坐标，再直接暴力枚举$n$来寻找覆盖该点的最大的价值是多少</p>
+<p>由于是求面积，我们是对线进行离散化，离散化后的编号$i$表示的是$[rx[i],rx[i+1])$这段线，那么线的长度为$rx[i+1]-rx[i]$</p>
+<p>判断某矩形是否包含现在所枚举的坐标:$x[k]&lt;=rx[i]\&amp;\&amp;rx[i+1]&lt;=X[k]$</p>
+<h4 id="离散化DP"><a href="#离散化DP" class="headerlink" title="离散化DP"></a>离散化DP</h4><h5 id="eg-hdu4028-The-time-of-a-day"><a href="#eg-hdu4028-The-time-of-a-day" class="headerlink" title="eg.hdu4028 The time of a day"></a>eg.hdu4028 The time of a day</h5><p>考虑dp，设$f[i][j]$表示考虑了前$i$个数，选中的数的lcm为$j$的方案数</p>
+<p>但由于第二维较大且不连续，所以可以考虑开map<int,int>f[N]</p>
+<p>于是得到转移</p>
+<p>一：不选第$i$个数，于是直接继承$f[i]=f[i-1]$</p>
+<p>二：选第$i$个数且选过$i$之前的数，$f[i][lcm(a[i],k)]+=f[i-1][k]$</p>
+<p>三:只选第$i$个数，$f[i][a[i]]+=1$</p>
+<p>复杂度$O(n*o)$</p>
+<p>$o$的计算方法是计算每个因子最多能取多少次，如$2^{64}&gt;t$说明$2$这个因子最多取$64$次</p>
+<p>每个因子都这样计算并且根据乘法原理可以得到$o$的取值</p>
+<h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><p>vector不能访问到未声明的下标，否则和数据越界是一样的</p>
+<p>可以先 vec.resize(k+1) 更改vector的大小再访问vec[k]</p>
+<p><strong>vector.size()返回值的类型是unsigned long，如果要做加减运算要转int</strong></p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/zkhc4mh8.png" alt="image-20251110195636501"></p>
+
+            
         </div>
     </div>
-    <footer id="gal-footer">
-    <div class="container">
-        Copyright © 2018 Lio Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/OI/" style="color: #00bcd4">OI</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%B7%B7%E8%AE%B0/" style="color: #03a9f4">混记</a>
+        </span>
+        
+    </div>
+    <a href="/2026/03/28/%E5%A4%8D%E5%81%A5/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2026/03/28/%E8%B4%AA%E5%BF%83/">
+        <h2 class="post-title">贪心</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/3/28
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a><strong>贪心</strong></h1><h2 id="1-哈夫曼模型"><a href="#1-哈夫曼模型" class="headerlink" title="1.哈夫曼模型"></a><strong>1.哈夫曼模型</strong></h2><p>哈夫曼树可以让$\sum dep*siz$最小</p>
+<p>方法是每次合并最小的两个</p>
+<p>小根堆$nlogn$实现</p>
+<p><strong>开两个队列可以$O(n)$实现 但需要排序所以最后复杂度也为$O(nlogn)$</strong></p>
+<p>例题</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1090">P1090 [NOIP 2004 提高组] 合并果子</a></p>
+<p>题意即为求$\sum dep*siz$的最小值</p>
+<h2 id="2-邻项交换法（调整法）"><a href="#2-邻项交换法（调整法）" class="headerlink" title="2.邻项交换法（调整法）"></a><strong>2.邻项交换法（调整法）</strong></h2><p>考虑相邻两项交换前与交换后对（局部）答案的影响，以此推出排序标准</p>
+<p>需要保证邻项交换只对该两项产生影响才可</p>
+<p>例题</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1080">P1080 [NOIP 2012 提高组] 国王游戏</a></p>
+<p>首先相邻两个大臣交换对其他所有大臣并无影响，接下来我们不妨设两个大臣分别为$a1,b1,a2,b2$，设之前的大臣$\prod a$为$x$</p>
+<p>首先如果按照目前的顺序那么两个大臣的答案分别为$\frac{x}{b1}$和$\frac{x*a1}{b2}$</p>
+<p>如果交换两者，那么答案变为$\frac{x}{b2}$和$\frac{x*a2}{b1}$</p>
+<p>所以假如我们现在的排序是正确的，那么有$max ( \frac{x}{b1},\frac{x<em>a1}{b2} ) &lt;max ( \frac{x}{b2},\frac{x</em>a2}{b1} ) $</p>
+<p>因为$\frac{x<em>a2}{b1}&gt;\frac{x}{b1}$和$\frac{x</em>a1}{b2}&gt;\frac{x}{b2}$是显然的</p>
+<p>所以我们想保证上面不等式恒成立，只需要保证$\frac{x<em>a1}{b2}&lt;\frac{x</em>a2}{b1}$</p>
+<p>化简一下就是$a1b1&lt;a2b2$，这也就是我们排序的标准了。</p>
+<h2 id="3-削峰，平均思想"><a href="#3-削峰，平均思想" class="headerlink" title="3.削峰，平均思想"></a>3.削峰，平均思想</h2><p>例题</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1106">P1106 删数问题</a></p>
+<p>考虑如果出现左边的数大于右边的数，那么删掉左边之后右边的数就会顶上来，从而使得结果变小，这其实就是进行了一个削峰的操作。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4447">P4447 [AHOI2018初中组] 分组</a></p>
+<p>每次分组从当前最小的一个开始往右找，不妨设这个最小的为p，假如我们找到x、x+1，假如x的数量大于x+1的数量，此时我们应该把x作为这一组的结尾。</p>
+<p>正确性：我们考虑如果不这样做的话那么x以后一定会成为某一组的结尾，但如果这样做那么有可能以后可以让x+1作为结尾，这其实也是进行了一个削峰的操作。</p>
+<p>稍微写一下实现</p>
+<p>1.最简便的是使用map，分组过程中不断遍历map就好</p>
+<p>2.当然可以手写离散化，在非连续的数之间插入一个出现次数为零的数即可，之后过程中使用链表可以保证复杂度为$O(n)$，所以瓶颈在排序</p>
+<h2 id="待归类"><a href="#待归类" class="headerlink" title="待归类"></a><strong>待归类</strong></h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1803">P1803 凌乱的yyy / 线段覆盖</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/OI/" style="color: #00a596">OI</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E8%B4%AA%E5%BF%83/" style="color: #ffa2c4">贪心</a>
+        </span>
+        
+    </div>
+    <a href="/2026/03/28/%E8%B4%AA%E5%BF%83/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/">
+        <h2 class="post-title">初级DP</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/3/28
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="0-DP的概念与设计和实现"><a href="#0-DP的概念与设计和实现" class="headerlink" title="0. DP的概念与设计和实现"></a><strong>0. DP的概念与设计和实现</strong></h1><p>概念：DP从本质上讲是图论问题的中的一种，DP的每一种状态所对应的便是一张图上的点，转移对应的便是图上的边。</p>
+<p>如果是求最值，那便是图论中的最短路或最长路；如果要求方案数，那便是图论中的路径统计问题。</p>
+<p>设计：DP的设计有三大要素：状态，转移方程，初始化。</p>
+<p>实现：DP的实现通常是三种方式，从当前状态向可能状态转移，从可能前继状态向当前状态转移，记忆化搜索。通常根据实现的难易来选择。</p>
+<h1 id="1-入门DP"><a href="#1-入门DP" class="headerlink" title="1. 入门DP"></a><strong>1. 入门DP</strong></h1><h2 id="1-数字三角形"><a href="#1-数字三角形" class="headerlink" title="1.数字三角形"></a>1.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1216" title="数字三角形">数字三角形</a></h2><p>我们先确定状态 $F[i][j]$表示到达当前位置$(i,j)$所累积的最大的数是多少。</p>
+<p>接下来考虑转移$F[i][j]=max(f[i-1][j],f[i-1][j-1])+w[i][j]$.</p>
+<p>不需初始化。</p>
+<p>时间复杂度$O(n^2)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43316695/bYED5QJOt3FXdS7YFGxO">代码</a></p>
+<p>可以线段树求动态区间前缀最大值优化到$O(nlogn)$具体请看 初级DP优化（鸽了</p>
+<h3 id="变式1-求在模100后的最大值。"><a href="#变式1-求在模100后的最大值。" class="headerlink" title="变式1.求在模100后的最大值。"></a>变式1.求在模100后的最大值。</h3><p>当DP条件变多时，我们便考虑给DP多开一维来记录状态$F[i][j][k]$表示当到达位置$(i,j)$时模$100$等于$k$是否可能$1$表示可能$0$表示不可能。</p>
+<p>于是我们得到转移方程$F[i][j][k]-&gt;F[i+1][j][(k+w[i+1][j])\%100]andF[i+1][j+1][(k+w[i+1][j+1])\%100]=1$</p>
+<p>最后扫描最后一行每一个位置$1-k$是否合法即可。</p>
+<p>时间复杂度$O(n^3)$。</p>
+<h3 id="变式2-求必经某个点限制下原问题的答案。"><a href="#变式2-求必经某个点限制下原问题的答案。" class="headerlink" title="变式2.求必经某个点限制下原问题的答案。"></a>变式2.求必经某个点限制下原问题的答案。</h3><p>只需先算$(1,1)$到该点的最大值再算该点到最后一排的最大值即可。</p>
+<p><strong>变式3.求不经过某个点限制下原问题的答案。</strong></p>
+<p>只需给不能经过的点初始化一个负无穷的值即可。</p>
+<h2 id="2-最长上升子序列"><a href="#2-最长上升子序列" class="headerlink" title="2.最长上升子序列"></a>2.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/B3637" title="最长上升子序列">最长上升子序列</a></h2><p>设计状态$F[i]$表示以i位置结尾的最长子序列长度</p>
+<p>得到转移$(a<em>j&gt;a_i)$时$F[i]=max</em>{j\in[1,i)]}(F[i],F[j]+1)$</p>
+<p>初始化$F[i]=1$  </p>
+<p>时间复杂度$O(n^2)$    <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43317743/MMhIHbneZQ9YwYfS8aK4">代码</a></p>
+<p>考虑记录方案数</p>
+<p>新开一个g数组</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(f[j] + <span class="number">1</span> &gt; f[i]) &#123; f[i] = f[j] + <span class="number">1</span>; g[i] = <span class="number">0</span>; pre[i] = j;&#125;</span><br><span class="line"><span class="keyword">if</span>(f[j] + <span class="number">1</span> == f[i]) g[i] += g[j];</span><br></pre></td></tr></table></figure>
+<p>如果第一行执行那么第二行也必然执行 这样写才能达到我们想要的效果</p>
+<p>考虑记录一种方案 </p>
+<p>如上方代码中记录的前继数组pre 输出时参考下述代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> z[], cnt;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">	z[++ cnt] = p;</span><br><span class="line">	p = pre[p];</span><br><span class="line">&#125; <span class="keyword">while</span>(p != <span class="number">0</span>);</span><br><span class="line"><span class="built_in">reverse</span>(z + <span class="number">1</span>, z + <span class="number">1</span> + cnt);</span><br></pre></td></tr></table></figure>
+<h2 id="一些例题"><a href="#一些例题" class="headerlink" title="一些例题"></a>一些例题</h2><h2 id="1-滑雪"><a href="#1-滑雪" class="headerlink" title="1.滑雪"></a>1.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1434" title="滑雪">滑雪</a></h2><p>考虑$F[i][j]$表示到位置$(i,j)$最多滑雪步数</p>
+<p>转移即为上下左右四个方向取$max$向当前位置转移并$+1$</p>
+<p>初始化所有点为$1$</p>
+<p>这样对吗？ NO。 因为我们的转移需要从步数少的地方向步数多的地方转移（这类似我们要先以高度进行一个拓扑排序）然后再判断当前位置上下左右哪个位置高度大于该处才能转移到该处</p>
+<p>时间复杂度为check ans的$O(nm)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43317941/a0W1NWTp6vdLBaxOTqhd">代码</a></p>
+<h2 id="2-乌龟棋"><a href="#2-乌龟棋" class="headerlink" title="2.乌龟棋"></a>2.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1541" title="乌龟棋">乌龟棋</a></h2><p>考虑状态$F[x][a][b][c][d]$为当前在x位置使用了a张1牌b张2牌…</p>
+<p>显然x可以通过1+a+2b+3c+4d得到 于是便可以压掉</p>
+<p>转移便是当前位置使用1或2或3或4向后转移即可</p>
+<p>时间复杂度$O(max种类牌数^4)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43318048/FcLscElJ7jmAYGSQAigx">代码</a></p>
+<h2 id="3-导弹拦截3"><a href="#3-导弹拦截3" class="headerlink" title="3.导弹拦截3"></a>3.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3903">导弹拦截3</a></h2><p>再开一维记录这发导弹是比上一发底还是高 特别注意初始化时第一颗导弹必须是比上一颗高</p>
+<p>时间复杂度$O(n^2)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43330461/9qfKsDGVJWWuzjSbPhjF" title="代码">代码</a></p>
+<h1 id="2-区间DP"><a href="#2-区间DP" class="headerlink" title="2.区间DP"></a><strong>2.区间DP</strong></h1><p>区间DP状态前两维通常为$F[i][j]$表示区间$i-&gt;j$的某种值</p>
+<p>转移通常为枚举一个断点$k$来更新$F[i][j] = F[i][k] ? F[k+1][j] + ?$ 其中$k\in[i,j)$</p>
+<p>转移时我们要先从小到大枚举一个len再枚举l这样才能保证我们是从小区间转移到大区间的</p>
+<p>初始化一般为$F[i][i]=w[i]or0$</p>
+<p>常见技巧的有环形需要我们开多倍长度断环为链</p>
+<h2 id="1-合并石子"><a href="#1-合并石子" class="headerlink" title="1.合并石子"></a>1.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1880" title="合并石子">合并石子</a></h2><p>按上述描述我们很容易完成这道题</p>
+<p>设状态$F[i][j]$表示将区间$[i,j]$内石子全部合并成一堆的最大得分</p>
+<p>枚举断点$k$转移$F[i][j]=max(F[i][j],F[i][k]+F[k+1][j])$</p>
+<p>初始化$F[i][i]=1$</p>
+<p>最小值只需将转移方程中的$max$改为$min$即可</p>
+<p>时间复杂度$O(n^3)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43318867/GlU68RoGFzsUGifh0PZm">代码</a> 其实细节还是不少的，不是很好写。</p>
+<h2 id="2-Brackets"><a href="#2-Brackets" class="headerlink" title="2.Brackets"></a>2.<a target="_blank" rel="noopener" href="http://poj.org/problem?id=2955" title="Brackets">Brackets</a></h2><p><img src="https://img2023.cnblogs.com/blog/3210833/202306/3210833-20230601220136288-770840223.png" alt="image"></p>
+<p>一样的设$F[i][j]$表示$[i,j]$最多匹配括号数</p>
+<p>转移需要分两种情况 一种是$F[i][j]=max(F[i][j],F[i][k]+F[k+1][j])$</p>
+<p>当$s[l]匹配s[r]$时 $F[i][j]=max(F[i][j],F[i+1][j-1]+2)$</p>
+<p>时间复杂度$O(n^3)$<a target="_blank" rel="noopener" href="https://vjudge.net/solution/43319599/Dy2MAdybAha4a4eMCaJc">代码</a></p>
+<h2 id="3-Multiplication-Puzzle"><a href="#3-Multiplication-Puzzle" class="headerlink" title="3.Multiplication Puzzle"></a>3.<a target="_blank" rel="noopener" href="http://poj.org/problem?id=1651" title="Multiplication Puzzle">Multiplication Puzzle</a></h2><p><img src="https://img2023.cnblogs.com/blog/3210833/202306/3210833-20230601224513526-110320766.png" alt="image"></p>
+<p>注意到左右端点的数不能删除 所以我们设状态$F[i][j]$表示$(i,j)$内的数被删干净的最小代价和</p>
+<p>转移$F[i][j]=min(F[i][j],F[i][k]+F[k][j]+w[k-1]*w[k+1])$</p>
+<p>注意前后都是k因为根据我们的状态意义左右端点是没有被删的</p>
+<p>时间复杂度$O(n^3)$<a target="_blank" rel="noopener" href="https://vjudge.net/solution/43320182/BGg3jGCUqPede6321er6">代码</a></p>
+<p>注意枚举断点k的时候$k\in(l,r)$左右都是开区间 理由同上</p>
+<h2 id="4-Palindrome-subsequence"><a href="#4-Palindrome-subsequence" class="headerlink" title="4.Palindrome subsequence"></a>4.<a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=4632" title="Palindrome subsequence">Palindrome subsequence</a></h2><p><img src="https://img2023.cnblogs.com/blog/3210833/202306/3210833-20230601231811549-468019348.png" alt="image"></p>
+<p>设$F[i][j]$表示$[i,j]$内回文子序列的数量</p>
+<p>那么得到$F[i][j]=F[i+1][j]+F[i][j-1]-F[i+1][j-1]$ 根据容斥原理这样可以将新的方案统计进来</p>
+<p>还要注意 如果$s[i]==s[j]$那么总方案还会多上$F[i+1][j-1]+1$即所有原来的回文串左右拼接上和左右两个字符组成一个回文串</p>
+<p>时间复杂度$O(n^2)$<a target="_blank" rel="noopener" href="https://vjudge.net/solution/43322147/Z8eJQgrpFTBrfxzgV7dn" title="代码">代码</a></p>
+<p>ex:如果是回文子串它是一道什么题呢？</p>
+<h2 id="5-248-G"><a href="#5-248-G" class="headerlink" title="5.248 G"></a>5.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3146" title="248 G">248 G</a></h2><p>差不多的做法，但注意特判不能用不合法状态转移下去</p>
+<p>时间复杂度$O(n^3)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43333726/l0IdCBTUDx8w60vRwQSA" title="代码">代码</a></p>
+<h2 id="6-矩阵取数游戏"><a href="#6-矩阵取数游戏" class="headerlink" title="6.*矩阵取数游戏"></a>6.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1005" title="矩阵取数游戏">*矩阵取数游戏</a></h2><h2 id="7-CQOI2007-涂色"><a href="#7-CQOI2007-涂色" class="headerlink" title="7.*[CQOI2007]涂色"></a>7.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4170" title="[CQOI2007]涂色">*[CQOI2007]涂色</a></h2><h2 id="8-SCOI2003-字符串折叠"><a href="#8-SCOI2003-字符串折叠" class="headerlink" title="8.*[SCOI2003]字符串折叠"></a>8.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4302" title="[SCOI2003]字符串折叠">*[SCOI2003]字符串折叠</a></h2><h2 id="9-NOIP2006-提高组-能量项链"><a href="#9-NOIP2006-提高组-能量项链" class="headerlink" title="9.*[NOIP2006 提高组] 能量项链"></a>9.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1063" title="[NOIP2006 提高组] 能量项链">*[NOIP2006 提高组] 能量项链</a></h2><h2 id="10-SDOI2008-Sue-的小球"><a href="#10-SDOI2008-Sue-的小球" class="headerlink" title="10.*[SDOI2008] Sue 的小球"></a>10.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2466" title="[SDOI2008] Sue 的小球">*[SDOI2008] Sue 的小球</a></h2><h2 id="11-N边形三角划分"><a href="#11-N边形三角划分" class="headerlink" title="11.N边形三角划分"></a>11.N边形三角划分</h2><p><img src="https://img2023.cnblogs.com/blog/3210833/202306/3210833-20230602125142311-1786989776.png" alt="image"></p>
+<p>设计状态$F[i][j]$表示将$[i,j]$划分完的最优解</p>
+<p>得到转移$F[i][j]=max(F[i][j], F[i][k]+F[k][j]+w[i]<em>w[j]</em>w[k])$</p>
+<h1 id="3-背包DP"><a href="#3-背包DP" class="headerlink" title="3.背包DP"></a><strong>3.背包DP</strong></h1><p>—2023.6.3-6.4凌晨时阅读背包九讲后部分重构</p>
+<h2 id="1-01背包"><a href="#1-01背包" class="headerlink" title="1.01背包"></a>1.01背包</h2><p>最简单的背包 直接给出转移方程$F[i][j] =max(F[i-1][j],F[i-1][j-v_i]+w_i)$</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++ i)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = v[i] ; j &lt;= V ; ++ j)</span><br><span class="line">	&#123;</span><br><span class="line">		f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - v[i]] + w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>转移只涉及$i-1$考虑滚动数组滚掉第一维$F[j]=max(F[j],F[j-v_i]+w_i)$</p>
+<p>需要注意枚举$j$时要从大到小枚举！</p>
+<p>这样才能保证$F[i][j]$是由$F[i-1][j-v_i]$更新来的而不被$F[i][j-v_i]$所影响</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++ i)</span><br><span class="line"></span><br><span class="line">​	<span class="keyword">for</span> (<span class="type">int</span> j = V ; j &gt;= v[i] ; -- j) f[j] = <span class="built_in">max</span>(f[j], f[j - v[i]] + w[i]);</span><br></pre></td></tr></table></figure>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>​        我们看到的求最优解的背包问题题目中，事实上有两种不太相同的问法。有的题目要求“恰好装满背包”时的最优解，有的题目则并没有要求必须把背包装满。一种区别这两种问法的实现方法是在初始化的时候有所不同。</p>
+<p>如果是第一种问法，要求恰好装满背包，那么在初始化时除了$F[0]$为$0$，其它$F[1..V ]$均设为$−∞$，这样就可以保证最终得到的$F[V]$是一种恰好装满背包的最优解。 </p>
+<p>如果并没有要求必须把背包装满，而是只希望价格尽量大，初始化时应该将 $F[0..V ]$ 全部设为 $0$。 </p>
+<p>这是为什么呢？</p>
+<p>可以这样理解：初始化的$F$数组事实上就是在没有任何物品可以放入背包时的合法状态。如果要求背包恰好装满，那么此时只有容量为$0$的背包可以在什 么也不装且价值为$0$的情况下被“恰好装满”，其它容量的背包均没有合法的解，属于未定义的状态，应该被赋值为$-∞$了。如果背包并非必须被装满，那么任何容量的背包都有一个合法解“什么都不装”，这个解的价值为$0$，所以初始时状态的值也就全部为$0$了。</p>
+<p>这个小技巧完全可以推广到其它类型的背包问题，后面不再对进行状态转移之前的初始化进行讲解。</p>
+<h2 id="常数小优化"><a href="#常数小优化" class="headerlink" title="常数小优化"></a>常数小优化</h2><p>$j$的枚举范围其实可以变为$V-&gt;max(V-\sum_{i=1}^n w[i],v[i])$</p>
+<h2 id="2-完全背包"><a href="#2-完全背包" class="headerlink" title="2.完全背包"></a>2.完全背包</h2><p>每个物品可以选无数次</p>
+<p>朴素的想法是在原来的基础上再枚举一个选择次数 但这样的复杂度是$O(n^3)$</p>
+<p>但其实我们直接用$F[i][j-v_i]+w_i$来更新$F[i][j]$即可这样就相当于我们把这件物品取$1、2、3……$都考虑进去了</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++ i)</span><br><span class="line"></span><br><span class="line">​	<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span> ; j &lt;= V ; ++ j) f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j],f[i][j - v[i]] + w[i])</span><br></pre></td></tr></table></figure>
+<p>一样使用滚动数组滚掉第一维度 $j$要正向枚举</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++ i)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> j = v[i] ; j &lt;= V ; ++ j) f[j] = <span class="built_in">max</span>(f[j], f[j - v[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-多重背包"><a href="#3-多重背包" class="headerlink" title="3.多重背包"></a>3.多重背包</h2><p>每个物品有固定的个数$k_i$</p>
+<p>一种朴素的想法是对每个物品建成它个数个的物品，这样就被转化为了普通的01背包问题</p>
+<p>但这样的时间复杂度是$O(V\sum_{i=1}^nk_i)$</p>
+<p>考虑倍增分组(很多地方叫它二进制分组 其实它应该叫倍增分组) 即将每个物品分成1、2、4、8….分组</p>
+<p>为什么这样分呢？因为这些数的二进制恰好为1、10、100、1000这样可以保证可以组合出选这个物品任意个数的所有方案</p>
+<p>复杂度变为$O(V\sum_{i=1}^nlog_2k_i)$</p>
+<p>如果改为可行性多重背包（指求将背包填满的方案数，不考虑价值）有一种使用单调队列的$O(Vn)$复杂度的做法 等我以后写在初级DP优化里。</p>
+<h2 id="4-混合背包"><a href="#4-混合背包" class="headerlink" title="4.混合背包"></a>4.混合背包</h2><p>上面几种混在一起</p>
+<p>第一层$i$的循环不变，第二层$j$的循环考虑哪种物品属于哪个情况就跑一遍哪个转移。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i &lt;- <span class="number">1</span> to N</span><br><span class="line"><span class="keyword">if</span>第i件物品属于<span class="number">01</span>背包</span><br><span class="line"><span class="built_in">ZeroOnePack</span>(F, v[i], w[i])</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>第i件物品属于完全背包</span><br><span class="line"><span class="built_in">CompletePack</span>(F, v[i], w[i])</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>第i件物品属于多重背包</span><br><span class="line"><span class="built_in">MultiplePack</span>(F, v[i], w[i], N)</span><br></pre></td></tr></table></figure>
+<h2 id="5-二维费用背包"><a href="#5-二维费用背包" class="headerlink" title="5.二维费用背包"></a>5.二维费用背包</h2><p>再开一维记录第二个费用。</p>
+<p>其余均一样。</p>
+<h2 id="有总选择物品数量上限的背包"><a href="#有总选择物品数量上限的背包" class="headerlink" title="有总选择物品数量上限的背包"></a>有总选择物品数量上限的背包</h2><p>这其实就相当于每个物品有了一个第二维费用1。</p>
+<h2 id="6-分组背包"><a href="#6-分组背包" class="headerlink" title="6.分组背包"></a>6.分组背包</h2><p>将每一组当成一个物品跑01背包。</p>
+<p>设$F[i][j]$表示前$i$组花费$j$的体积能获得的最大价值，则有：</p>
+<p>$F[i][j]=max(F[i-1][j],F[i-1][j-v_x]+w_x)|x\in i$</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++ i)<span class="comment">//枚举哪一组</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">​	<span class="keyword">for</span>(<span class="type">int</span> j = m ; j &gt;= <span class="number">0</span> ; -- j)</span><br><span class="line"></span><br><span class="line">​	&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">for</span>(<span class="type">int</span> x = <span class="number">1</span> ; x &lt;= cnt[i] ; ++ x) f[j] = <span class="built_in">max</span>(f[j], f[j - v[x]] + w[x]);</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>三层（主要是体积反着枚举）循环的顺序保证了每一组内的物品最多只有一个被选</p>
+<h2 id="一个显然的优化"><a href="#一个显然的优化" class="headerlink" title="一个显然的优化"></a>一个显然的优化</h2><p>如果一个物品体积更小价值更大，那么一定比它劣的物品就可以被删去了</p>
+<p>（如果一个人比你小还比你强，那么你就没用了）</p>
+<h2 id="依赖背包（放到树形DP中讲）"><a href="#依赖背包（放到树形DP中讲）" class="headerlink" title="依赖背包（放到树形DP中讲）"></a>依赖背包（放到树形DP中讲）</h2><h2 id="7-泛化物品"><a href="#7-泛化物品" class="headerlink" title="7.泛化物品"></a>7.泛化物品</h2><p>假如一个物品所对应的价值为一个函数$h()$你花费$V$的体积便能获得$h(V)$的价值</p>
+<p>上述几种背包都是泛化物品的简单形式</p>
+<p>如01背包里的物品便是$h(v)=w,h(other)=0$的泛化物品</p>
+<p>一个物品组自然也可以看作一个泛化物品 该物品的$h$函数为，若不存在体积为$v$的物品$h(v)=0$否则$h(v)$取体积为$v$的物品中价值最大的一个$w$</p>
+<p>如果给定了两个泛化物品$h$和$l$，用一定的体积怎么取得最大的价值呢？</p>
+<p>其实只要枚举这个体积是如何分配的即可</p>
+<p>$f(v)=max(h(k)+l(v-k))|k\in[0,v]$</p>
+<p>可以看出$f$是一个由$h$和$l$决定的定义域为$[0,V]$的函数，所以$f$也是一个泛化物品，是由泛化物品$h$和$l$决定的泛化物品</p>
+<p>所以求解任何背包问题其实都是在讲所有泛化物品合成一个泛化物品</p>
+<p>只不过这个函数可能会有很多限制</p>
+<h2 id="8-求一种方案"><a href="#8-求一种方案" class="headerlink" title="8.求一种方案"></a>8.求一种方案</h2><p>类似普通DP记录方案的方法</p>
+<p>拿$01$背包举例 转移方程$F[i][j]=max(F[i-1][j],F[i-1][j-v_i]+w_i)$</p>
+<p>开一个$G[i,j]$表示当前$F[i,j]$是由前一项还是后一项$(0/1)$推过来的</p>
+<p>输出时大概这样写</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">i &lt;-N</span><br><span class="line"></span><br><span class="line">j &lt;- V</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> i &gt; <span class="number">0</span></span><br><span class="line"></span><br><span class="line">​	<span class="keyword">if</span>(G[i,j]) =<span class="number">0</span></span><br><span class="line"></span><br><span class="line">​	printf 未选当前物品</span><br><span class="line"></span><br><span class="line">​	<span class="keyword">else</span> printf 选了当前物品, j &lt;- j-v[i]</span><br><span class="line"></span><br><span class="line">i &lt;- i <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<h2 id="字典序最小"><a href="#字典序最小" class="headerlink" title="字典序最小"></a>字典序最小</h2><p>DP时从后往前推</p>
+<p>即$i$要从$n$到$1$枚举 这样更改后的子问题才能保证字典序最小（这里体积的枚举顺序无所谓，因为没有进行空间压缩）</p>
+<p>输出方案时才能从前往后推</p>
+<h2 id="9-求方案数"><a href="#9-求方案数" class="headerlink" title="9.求方案数"></a>9.求方案数</h2><p>只需将Max改为Sum即可</p>
+<h2 id="10-求最优方案数"><a href="#10-求最优方案数" class="headerlink" title="10.求最优方案数"></a>10.求最优方案数</h2><p>分别根据转移时是取max前面一项还是后面一项转移$G$数组即可</p>
+<p>$G[0][0]=1$</p>
+<p>因为体积为$0$时什么都不选是一种最优方案。</p>
+<h2 id="11-求第k优解"><a href="#11-求第k优解" class="headerlink" title="11.求第k优解"></a>11.求第k优解</h2><p>再开一维表示当前状况的第$k$优解</p>
+<p>复杂度相应的多乘上了一个$k$</p>
+<p>根据题目对不同解的定义来判断是否有相同的值存在第三维中</p>
+<h2 id="一些例题-1"><a href="#一些例题-1" class="headerlink" title="一些例题"></a>一些例题</h2><h2 id="1-HEOI2013-Eden-的新背包问题"><a href="#1-HEOI2013-Eden-的新背包问题" class="headerlink" title="1.*[HEOI2013]Eden 的新背包问题"></a>1.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4095">*[HEOI2013]Eden 的新背包问题</a></h2><h1 id="4-树形DP"><a href="#4-树形DP" class="headerlink" title="4.树形DP"></a><strong>4.树形DP</strong></h1><p>基于树的DP 通常状态为$F[i]$表示以$i$为根的子树的某些值</p>
+<p>DP方法为从叶子节点不断向上做聚合 实现方法为DFS</p>
+<h2 id="1-树的直径"><a href="#1-树的直径" class="headerlink" title="1.树的直径"></a>1.<a target="_blank" rel="noopener" href="https://www.spoj.com/problems/PT07Z/en/">树的直径</a></h2><p>设状态$F[i][0]$和$F[i][1]$分别表示$i$距离它子树内所有点的最远距离和次远距离是多少</p>
+<p>注意上述最远和次远是对两个儿子而言 不能在一个儿子里</p>
+<p>所有转移时取儿子里的最大和次大$+1$即可</p>
+<p>时间复杂度$O(n)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43342459/RB3WGDeqJPVzCmTVX9MQ">代码</a></p>
+<h3 id="记录节点"><a href="#记录节点" class="headerlink" title="记录节点"></a>记录节点</h3><p>转移时记录最长和次长分别是哪个儿子即可</p>
+<h2 id="2-树上任意两点距离和"><a href="#2-树上任意两点距离和" class="headerlink" title="2.树上任意两点距离和"></a>2.树上任意两点距离和</h2><p>即求$\sum<em>{i=1}^n\sum</em>{j=1}^ndis(i,j)$</p>
+<p>设$F[i]$表示以$i$为根的子树内所有点的路径和$g[i]$表示以$i$为根的子树内所有点到$i$的距离和$size[i]$表示以$i$为根的子树大小</p>
+<p>从点的角度出发</p>
+<p>转移为$F[i]=\sum_{p\in i}F[p]+(g[p]+size[p])*(size[i]-size[p])$</p>
+<p>前面一个括号指的是以$i$为根的所有子树内的点到$i$的距离和，后面一个括号指的是以$i$为根的子树除掉$p$后剩下的子树大小</p>
+<p>从边的角度出发更为简单</p>
+<p>只需DP算出$size[i]$</p>
+<p>$ans=\sum_{i=1andi不是根节点}^nsize[i]<em>(n-size[i])</em>2$</p>
+<p>因为起点终点对换也要统计进答案，所以最后要$*2$</p>
+<h2 id="3-求树的最大独立集"><a href="#3-求树的最大独立集" class="headerlink" title="3.求树的最大独立集"></a>3.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1352">求树的最大独立集</a></h2><p>设$F[i][0/1]$表示以$i$为根的子树内最大独立集是多少$0/1$分别表示$i$不选/选</p>
+<p>易得到转移</p>
+<p>$F[i][1]=\sum_{p\in i}F[p][0]$</p>
+<p>$F[i][0]=\sum_{p\in i}max(F[p][0],F[p][1])$</p>
+<p>初始化叶子节点$F[i][1]=1$</p>
+<p>时间复杂度$O(n)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43344697/deLF1KpcmlpB61o5yWa3">代码</a></p>
+<h2 id="4-皇宫看守"><a href="#4-皇宫看守" class="headerlink" title="4.皇宫看守"></a>4.<a target="_blank" rel="noopener" href="https://loj.ac/p/10157">皇宫看守</a></h2><p>设$F[i][0/1/2]$表示以$i$为根的子树内的全部点被守护且$0/1/2$分别表示$i$点是被儿子/自己/父亲守护的</p>
+<p>得到两个显然的转移</p>
+<p>$F[i][1]=\sum_{p\in i}min(F[p][0], F[p][1], F[p][2])$</p>
+<p>$F[i][2]=\sum_{p\in i}F[p][0]$</p>
+<p>发现$F[i][0]$的转移需要查询$i$的儿子中必选一个放士兵的最小值</p>
+<p>所以我们再开一个DP</p>
+<p>设$g[k][0/1]$表示前$k$个儿子中$0/1$(选/没选)的最优解    </p>
+<p>转移为</p>
+<p>$g[k][0]=g[k-1][0]+f[k][0]$</p>
+<p>$g[k][1]=min(g[k-1][1]+f[k][1],g[k-1][1]+f[k][0],g[k-1][0]+f[k][1])$</p>
+<p>时间复杂度$O(n)$ <a target="_blank" rel="noopener" href="https://loj.ac/s/1788182">代码</a>    （你猜我调了多久。）</p>
+<h2 id="5-依赖背包"><a href="#5-依赖背包" class="headerlink" title="5.依赖背包 "></a>5.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1064">依赖背包 </a></h2><p>必须要先选当前点的物品才能选其儿子的物品</p>
+<p>设$F[i][j]$表示$i$的子树内用了$j$的体积的最大价值</p>
+<p>节点初始化为$F[i][0]=0,F[i][v_i]=w_i,F[i][其他]=-INF$</p>
+<p>再设$g[i][j]$表示前$i$个儿子用掉了$j$的体积的最大价值</p>
+<p>初始化为$g[0][0]=0,g[0][其他]=-INF$</p>
+<p>转移时枚举第$i$个儿子花费的体积</p>
+<p>$g[i][j]=max_{k\in[0,j]}g[i-1][j-k]+F[p_i][k],p_i是第i个儿子$</p>
+<p>然后更新$F$</p>
+<p>$F[i][j]=g[r][j-v_i]+w_i,r是儿子总数$</p>
+<p>其实就是在儿子向父亲更新时对所有儿子做了一个01背包</p>
+<p>然后对所有树根建一个虚拟源点$0$号点</p>
+<p>对$0$号点的所有$F$求$max$即可</p>
+<p>因为题目限制的体积为10的倍数，枚举时按10加或减即可</p>
+<p>时间复杂度$O(&lt;n^2m)$ <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43757686/uhl6HTPaD1zIRJF23UhF">代码</a></p>
+<p>ps:由此可以看出稍微复杂的树形DP通常是在转移时需要再开一个DP去计算转移</p>
+<h2 id="6-JSOI2018-潜入行动"><a href="#6-JSOI2018-潜入行动" class="headerlink" title="6.*[JSOI2018] 潜入行动"></a>6.*<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4516">[JSOI2018] 潜入行动</a></h2><h2 id="7-P2889-USACO07NOV-Milking-Time-S"><a href="#7-P2889-USACO07NOV-Milking-Time-S" class="headerlink" title="7.*P2889 [USACO07NOV]Milking Time S"></a>7.*P2889 [USACO07NOV]Milking Time S</h2><h1 id="5-数位DP"><a href="#5-数位DP" class="headerlink" title="5.数位DP"></a>5.数位DP</h1><p>一般是求$[l,r]$中有多少满足条件的数</p>
+<p>转化为求$[0,r]-[0,l-1]$</p>
+<p>状态设计为$F[i][0/1]$表示当前填到第$i$位置是 小于/等于 x的数有多少个</p>
+<p>假设x有$k$位 初始化为$F[k+1][1]=1$</p>
+<h2 id="1-求-L-R-中有多少个数"><a href="#1-求-L-R-中有多少个数" class="headerlink" title="1.求$[L,R]$中有多少个数"></a>1.<a target="_blank" rel="noopener" href="https://uoj.ac/problem/1">求$[L,R]$中有多少个数</a></h2><p>我们用数位DP来做这道题</p>
+<p>考虑转移枚举下一位填什么</p>
+<p>$F[i-1][0]+=F[i][0]$</p>
+<p>当枚举的数小于原数当前位置的数时$F[i-1][0]+=F[i][1]$</p>
+<p>等于时$F[i-1][1]+=F[i][1]$</p>
+<p>时间复杂度$O(a+b)$<a target="_blank" rel="noopener" href="https://uoj.ac/submission/625882">代码</a></p>
+<p>一种优秀的写法是</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UF</span>(i, cnt + <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">F</span>(j, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">F</span>(r, <span class="number">0</span>, <span class="number">9</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(j == <span class="number">1</span> &amp;&amp; r &gt; y[i - <span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">			f[i - <span class="number">1</span>][j != <span class="number">0</span> &amp;&amp; (r == y[i - <span class="number">1</span>])] += f[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-求在-L-R-中的数的数位之和"><a href="#2-求在-L-R-中的数的数位之和" class="headerlink" title="2.求在$[L,R]$中的数的数位之和"></a>2.求在$[L,R]$中的数的数位之和</h2><p>设计为$G[i][0/1]$表示当前填到第$i$位置是 小于/等于 x的数的数位之和为多少</p>
+<p>转移时枚举下一位填什么</p>
+<p>$G[i-1][0]+=G[i][0]+r*F[i][0]$</p>
+<p>当枚举的数小于原数当前位置的数时$G[i-1][0]+=G[i][1]+r*F[i][1]$</p>
+<p>等于时$G[i-1][1]+=G[i][1]+r*F[i][1]$</p>
+<p>发现就是对原来F的转移替换为G的转移然后再加上当前位置填什么乘上前面有多少个数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UF</span>(i, cnt + <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">F</span>(j, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">F</span>(r, <span class="number">0</span>, <span class="number">9</span>)</span><br><span class="line">		&#123;</span><br><span class="line">             <span class="keyword">if</span>(j == <span class="number">1</span> &amp;&amp; r &gt; y[i - <span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">			f[i - <span class="number">1</span>][j != <span class="number">0</span> &amp;&amp; (r == y[i - <span class="number">1</span>])] += f[i][j];</span><br><span class="line">			g[i - <span class="number">1</span>][j != <span class="number">0</span> &amp;&amp; (r == y[i - <span class="number">1</span>])] += g[i][j] + r * f[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-SCOI2009-windy-数"><a href="#3-SCOI2009-windy-数" class="headerlink" title="3.*[SCOI2009] windy 数"></a>3.*<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2657">[SCOI2009] windy 数</a></h2><p>再开一维记录上一位选了什么。</p>
+<p>前导$0$特殊处理</p>
+<p>调不出来了。</p>
+<h2 id="4-SCOI2011-镜像拆分弱化"><a href="#4-SCOI2011-镜像拆分弱化" class="headerlink" title="4.[SCOI2011]镜像拆分弱化"></a>4.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3276">[SCOI2011]镜像拆分弱化</a></h2><p>原题是假题。</p>
+<p>假如我们去掉K进制限制。</p>
+<p>设$F[i][j][k]$表示填到第$i$位，前部分 等于/小于$1/0$ 后半部分 大于/等于/小于$2/1/0$</p>
+<p>注意后半部分是有可能大于原数的 只要前半部分小于即可</p>
+<h2 id="5-求在-L-R-中的满足各位数字之积为K的数有多少个"><a href="#5-求在-L-R-中的满足各位数字之积为K的数有多少个" class="headerlink" title="5.*求在[L,R]中的满足各位数字之积为K的数有多少个"></a>5.*求在[L,R]中的满足各位数字之积为K的数有多少个</h2><p>设$F[i][j][k]$表示填到第$i$位，前部分 等于/小于$1/0$  乘积为$k$</p>
+<p>但是$k$很大 怎么办</p>
+<p>考虑到是一位一位乘，所以质因子只有$2,3,5,7$四个</p>
+<p>分别开一维记录有几个即可</p>
+<p>真的做完了吗？</p>
+<p>考虑$k$为$0$的情况</p>
+<p>要新做一个DP是填到第$i$位，前面有没有填过$0$</p>
+<p>前导$0$特殊处理</p>
+<p><a href="">代码</a></p>
+<h2 id="6-l-r-中找一个x使各位之间差值绝对值和最大"><a href="#6-l-r-中找一个x使各位之间差值绝对值和最大" class="headerlink" title="6.[l,r]中找一个x使各位之间差值绝对值和最大"></a>6.[l,r]中找一个x使各位之间差值绝对值和最大</h2><p>发现这次并不是求有多少数满足条件</p>
+<p>所以我们要改一改我们的DP</p>
+<p>设$F[i][j][k][l]$分别表示当前填到第几位，当前的数是小于/等于$r$，当前的数是等于/大于$l$，上一位填的是$l$</p>
+<p>枚举这一位填什么转移即可</p>
+<h1 id="6-排列DP"><a href="#6-排列DP" class="headerlink" title="6.排列DP"></a>6.排列DP</h1><p>一般的状态设计是$F[i][j]$表示$1-i$都已经放进序列，满足某种限制的个数是$j$的方案数是多少</p>
+<p>根据题目思考一下是从小到大放还是从大到小放</p>
+<p>编号一般从$0$开始编号比较方便</p>
+<h2 id="1-1-n-排列中有多少个排列的逆序对的数量是偶数"><a href="#1-1-n-排列中有多少个排列的逆序对的数量是偶数" class="headerlink" title="1.$1-n$排列中有多少个排列的逆序对的数量是偶数"></a>1.$1-n$排列中有多少个排列的逆序对的数量是偶数</h2><p>从小到大放</p>
+<p>设$F[i][j]$表示$1-i$已经放好，有$j$个逆序对</p>
+<p>转移时枚举放在哪里即可，因为从小到大放，所以放到编号为几的位置逆序对就会多几个。</p>
+<p>发现只要求偶数，所以第二维可以改成记录奇偶</p>
+<p>其实这个题目是有结论的，答案为$n!/2$</p>
+<h2 id="2-LEMOVIE-Little-Elephant-and-Movies"><a href="#2-LEMOVIE-Little-Elephant-and-Movies" class="headerlink" title="2.*LEMOVIE: Little Elephant and Movies"></a>2.*<a target="_blank" rel="noopener" href="https://www.codechef.com/FEB14/problems/LEMOVIE">LEMOVIE: Little Elephant and Movies</a></h2><p>考虑从大到小放，比较容易保证题目的要求</p>
+<p>转移考虑只有当前数放在最前面才能使激动值增加</p>
+<p>设已经插入$x$个数，第$i$大的有$y$个</p>
+<p>$f(i,j)=f(i-1,j)<em>\binom{x+y-1}{x-1}</em>{y!}\ +\ f(i-1,j-1)<em>\binom{x+y-1}{x}</em>{y!}$ </p>
+<h2 id="3-1-n-的排列中-有多少最长上升子序列长度-≤2"><a href="#3-1-n-的排列中-有多少最长上升子序列长度-≤2" class="headerlink" title="3.*$1-n$的排列中,有多少最长上升子序列长度$≤2$"></a>3.*$1-n$的排列中,有多少最长上升子序列长度$≤2$</h2><h1 id="7-状压DP"><a href="#7-状压DP" class="headerlink" title="7.状压DP"></a>7.状压DP</h1><p>枚举子集的方法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = x ; ; i = (i - <span class="number">1</span>) &amp; x)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">do</span> sth.</span><br><span class="line">    <span class="keyword">if</span>(!z) <span class="keyword">break</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-异或背包"><a href="#1-异或背包" class="headerlink" title="1.异或背包"></a>1.异或背包</h2><p>$F[i][j][k]$ 物品选择压缩成的状态/上一个选的物品/当前所用体积 能获得最大价值</p>
+<p>转移 如果$(i&gt;&gt;r)and1==0其中0&lt;=r&lt;N]$那么$F[i|(1&lt;&lt;r)][r][k+v_r]=chkmax(F[i][j][k]+w_jxorw_r)$</p>
+<h2 id="2-吃奶酪"><a href="#2-吃奶酪" class="headerlink" title="2.吃奶酪 "></a>2.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1433">吃奶酪 </a></h2><p>这类问题叫旅行商(TSP)问题，即表示从起点出发，经过所有点一次的最小路径和。</p>
+<p>具有非常明显的状压特征</p>
+<p>第一维压缩当前哪些点走过了，第二维记录停在哪里</p>
+<p>转移枚举下一次去哪即可</p>
+<p><a target="_blank" rel="noopener" href="https://vjudge.net/solution/43425684/Elh6Yh82p4VhlGMD7Ga9">代码</a></p>
+<h2 id="3-售货员的难题"><a href="#3-售货员的难题" class="headerlink" title="3.售货员的难题"></a>3.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1171">售货员的难题</a></h2><p>同上</p>
+<p><a target="_blank" rel="noopener" href="https://vjudge.net/solution/43424985/zCKZb8G9RU2Izoul5Q68">代码</a></p>
+<h2 id="4-USACO-Corn-Fields-G"><a href="#4-USACO-Corn-Fields-G" class="headerlink" title="4.[USACO]Corn Fields G "></a>4.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1879">[USACO]Corn Fields G </a></h2><p>$F[i][j]$表示当前考虑到第$i$行，上一行状态压缩完为$j$</p>
+<p>转移考虑枚举$j$的补集的子集</p>
+<p>复杂度是$O(3^n)$   一般适用于$14&lt;=n&lt;=16$</p>
+<p><a target="_blank" rel="noopener" href="https://vjudge.net/solution/43432941/GYCiSuTGf8h9yBRmFgIn">代码</a></p>
+<h2 id="5-互不侵犯"><a href="#5-互不侵犯" class="headerlink" title="5.互不侵犯"></a>5.互不侵犯</h2><h2 id="6-中国象棋-摆上马"><a href="#6-中国象棋-摆上马" class="headerlink" title="6.中国象棋 - 摆上马"></a>6.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5005">中国象棋 - 摆上马</a></h2><p>卡空间毒瘤题。</p>
+<p><a target="_blank" rel="noopener" href="https://vjudge.net/solution/43669212/B6qffaFVvlXZ4trM8lxg">代码</a></p>
+<h1 id="8-博弈DP"><a href="#8-博弈DP" class="headerlink" title="8.博弈DP"></a>8.博弈DP</h1><p>zu。</p>
+<h2 id="二人博弈"><a href="#二人博弈" class="headerlink" title="二人博弈"></a>二人博弈</h2><h2 id="组合博弈"><a href="#组合博弈" class="headerlink" title="组合博弈"></a>组合博弈</h2><p>sg定理。</p>
+<h1 id="一般DP"><a href="#一般DP" class="headerlink" title="一般DP"></a>一般DP</h1><p>无迹可寻。</p>
+<h2 id="1-AHOI2009-中国象棋"><a href="#1-AHOI2009-中国象棋" class="headerlink" title="1.[AHOI2009]中国象棋"></a>1.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2051">[AHOI2009]中国象棋</a></h2><p>设$F[i][j][k][l]$表示当前放完了前$i$行，当前有$0/1/2$个炮的列数是$j/k/l$的方案数是多少</p>
+<p>发现后三维相加等于总列数，所以可以压掉一维</p>
+<p>于是变为$F[i][j][k]$</p>
+<p>转移就是考虑当前这一行放$0/1/2$个炮，每个炮放在了有几个炮的一列上</p>
+<p>时间复杂度$O(nm^2)$  <a target="_blank" rel="noopener" href="https://vjudge.net/solution/43411552/rTftQ3rMd12yGR3UqcsQ">代码</a></p>
+<h2 id="2-关路灯"><a href="#2-关路灯" class="headerlink" title="2.*关路灯"></a>2.*<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1220">关路灯</a></h2><h2 id="3-HDU-5009"><a href="#3-HDU-5009" class="headerlink" title="3.HDU 5009"></a>3.HDU 5009</h2><p>好题。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/OI/" style="color: #00a596">OI</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/DP/" style="color: #00bcd4">DP</a>
+        </span>
+        
+    </div>
+    <a href="/2026/03/28/%E5%88%9D%E7%BA%A7DP/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <span class="current">1</span>
+    
+    
+    
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avatar.jpg" alt="avatar" />
+        </div>
+        <div class="name">Lio</div>
+        <div class="description">
+            <p>Description<br>…</p>
+
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 Lio&#39;s Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Lio
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
     </div>
 </footer>
 
-<!-- 回到顶端 -->
-<div id="gal-gotop">
-    <i class="fa fa-angle-up"></i>
-</div>
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
 </body>
-
-<script src="/js/activate-power-mode.js"></script>
-
-<script>
-
-    // 配置highslide
-	hs.graphicsDir = '/js/highslide/graphics/'
-    hs.outlineType = "rounded-white";
-    hs.dimmingOpacity = 0.8;
-    hs.outlineWhileAnimating = true;
-    hs.showCredits = false;
-    hs.captionEval = "this.thumb.alt";
-    hs.numberPosition = "caption";
-    hs.align = "center";
-    hs.transitions = ["expand", "crossfade"];
-    hs.lang.number = '共%2张图, 当前是第%1张';
-    hs.addSlideshow({
-      interval: 5000,
-      repeat: true,
-      useControls: true,
-      fixedControls: "fit",
-      overlayOptions: {
-        opacity: 0.75,
-        position: "bottom center",
-        hideOnMouseOut: true
-      }
-    })
-
-    // 初始化aos
-    AOS.init({
-      duration: 1000,
-      delay: 0,
-      easing: 'ease-out-back'
-    });
-
-</script>
-<script>
-	POWERMODE.colorful = 'true';    // make power mode colorful
-	POWERMODE.shake = 'true';       // turn off shake
-	// TODO 这里根据具体情况修改
-	document.body.addEventListener('input', POWERMODE);
-</script>
-<script>
-    window.slideConfig = {
-      prefix: '/imgs/slide/background',
-      ext: 'jpg',
-      maxCount: '6'
-    }
-</script>
-
-<script src="/js/hs.js"></script>
-<script src="/js/blog.js"></script>
-
-
-
-
 </html>
