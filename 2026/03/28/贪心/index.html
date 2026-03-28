@@ -254,7 +254,7 @@
 <p>首先相邻两个大臣交换对其他所有大臣并无影响，接下来我们不妨设两个大臣分别为$a1,b1,a2,b2$，设之前的大臣$\prod a$为$x$</p>
 <p>首先如果按照目前的顺序那么两个大臣的答案分别为$\frac{x}{b1}$和$\frac{x*a1}{b2}$</p>
 <p>如果交换两者，那么答案变为$\frac{x}{b2}$和$\frac{x*a2}{b1}$</p>
-<p>所以假如我们现在的排序是正确的，那么有$max(\frac{x}{b1},\frac{x<em>a1}{b2})&lt;max(\frac{x}{b2},\frac{x</em>a2}{b1})$</p>
+<p>所以假如我们现在的排序是正确的，那么有$max ( \frac{x}{b1},\frac{x<em>a1}{b2} ) &lt;max ( \frac{x}{b2},\frac{x</em>a2}{b1} ) $</p>
 <p>因为$\frac{x<em>a2}{b1}&gt;\frac{x}{b1}$和$\frac{x</em>a1}{b2}&gt;\frac{x}{b2}$是显然的</p>
 <p>所以我们想保证上面不等式恒成立，只需要保证$\frac{x<em>a1}{b2}&lt;\frac{x</em>a2}{b1}$</p>
 <p>化简一下就是$a1b1&lt;a2b2$，这也就是我们排序的标准了。</p>
